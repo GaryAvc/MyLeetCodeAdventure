@@ -30,36 +30,41 @@ public class Solution {
             if(nums[i]>0){
                 return ans;
             }
-            int l=i+1;
-            int r=len-1;
-            while (l<r){
-                int sum = nums[i]+nums[l]+nums[r];
-                if(sum==0){
-                    List<Integer> item = new ArrayList<>();
-                    item.add(nums[i]);
-                    item.add(nums[l]);
-                    item.add(nums[r]);
-                    ans.add(item);
-                    break;
-                }
-                while( l<r && nums[l]==nums[l+1] ){
-                    l++;
-                }
-                while(l<r && nums[r]==nums[r-1]  ){
-                    r--;
-                }
-                if(sum<0){
-                    l++;
-                }else if (sum>0){
-                    r--;
-                }
+            if(i>0&&nums[i]==nums[i+1]) {
+                continue;
             }
-        }
+                int l=i+1;
+                int r=len-1;
+                while (l<r){
+                    int sum = nums[i]+nums[l]+nums[r];
+                    if(sum==0){
+                        List<Integer> item = new ArrayList<>();
+                        item.add(nums[i]);
+                        item.add(nums[l]);
+                        item.add(nums[r]);
+                        ans.add(item);
+                        break;
+                    }
+                    while( l<r && nums[l]==nums[l+1] ){
+                        l++;
+                    }
+                    while(l<r && nums[r]==nums[r-1]  ){
+                        r--;
+                    }
+                    if(sum<0){
+                        l++;
+                    }else if (sum>0){
+                        r--;
+                    }
+
+            }
+            }
+
         return ans;
     }
 
     public static void main(String[] args) {
-        int [] list = {0,1,1};
+        int [] list = {-1,0,1,2,-1,-4};
         Solution s  = new Solution();
         System.out.println(s.threeSum(list));
     }
