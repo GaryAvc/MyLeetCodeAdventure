@@ -32,7 +32,7 @@ public class Solution {
             }
             int l=i+1;
             int r=len-1;
-            while (Math.abs(l-r)!=0){
+            while (l<r){
                 int sum = nums[i]+nums[l]+nums[r];
                 if(sum==0){
                     List<Integer> item = new ArrayList<>();
@@ -42,10 +42,10 @@ public class Solution {
                     ans.add(item);
                     break;
                 }
-                while( nums[l]==nums[l+1] && l+1<=len-2){
+                while( l<r && nums[l]==nums[l+1] ){
                     l++;
                 }
-                while( nums[r]==nums[r-1] && r-1>=0){
+                while(l<r && nums[r]==nums[r-1]  ){
                     r--;
                 }
                 if(sum<0){
@@ -59,7 +59,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int [] list = {0,0,0};
+        int [] list = {0,1,1};
         Solution s  = new Solution();
         System.out.println(s.threeSum(list));
     }
