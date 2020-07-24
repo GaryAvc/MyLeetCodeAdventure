@@ -43,15 +43,16 @@ public class Solution {
                         item.add(nums[l]);
                         item.add(nums[r]);
                         ans.add(item);
+                        while( l<r && nums[l]==nums[l+1] ){
+                            l++;
+                        }
+                        while(l<r && r<nums.length-1 && nums[r]==nums[r-1]  ){
+                            r--;
+                        }
                         l++;
                         r--;
                     }
-                    while( l<r && nums[l]==nums[l+1] ){
-                        l++;
-                    }
-                    while(l<r && r<nums.length-1 && nums[r]==nums[r-1]  ){
-                        r--;
-                    }
+
                     if(sum<0){
                         l++;
                     }else if (sum>0){
@@ -65,7 +66,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int [] list = {1,-1,-1,0};
+        int [] list = {-2,0,1,1,2};
         Solution s  = new Solution();
         System.out.println(s.threeSum(list));
     }

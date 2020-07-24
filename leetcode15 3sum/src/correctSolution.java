@@ -30,7 +30,7 @@ class correctSolution {
     }
 
     public static void main(String[] args) {
-        int [] list = {1,-1,-1,0};
+        int [] list = {-2,0,1,1,2};
         correctSolution s  = new correctSolution();
         System.out.println(s.threeSum(list));
     }
