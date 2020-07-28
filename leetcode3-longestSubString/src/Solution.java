@@ -5,58 +5,45 @@ import java.util.Set;
 
 class Solution {
     public static void main(String[] args) {
-        Solution s=new Solution();
-        System.out.println(s.lengthOfLongestSubstring("abcabcbb"));
+        Solution s = new Solution();
+        System.out.println(s.lengthOfLongestSubstring("au"));
     }
     public int lengthOfLongestSubstring(String s) {
-        int maxlength =0;
-        Map<Integer,String> map = store(s);
+        if(s.equals("")){
+            return 0;
+        }
+        Map<Integer,String> map = new HashMap<>();
         for( int i=0;i<s.length();++i){
-           if(maxlength<interval(map,i) && !checkDuplicate(map,i,interval(map,i))){
-               maxlength=interval(map,i);
-           }
+            map.put(i,s.substring(i,i+1));
         }
-        return maxlength;
-    }
-
-    /*
-    it store the every character in string into a hashmap
-     */
-    public Map<Integer,String> store(String s){
-        Map<Integer,String> everyChar = new HashMap<>();
-        for(int i=0;i<s.length();++i){
-            everyChar.put(i,s.substring(i,i+1));
-        }
-        return everyChar;
-    }
-
-    /*
-    this function check the distance between nearest same character
-     */
-    public int interval (Map<Integer,String> map, int index){
-        String origin = map.get(index);
-        for ( int i=index+1;i<map.size();++i){
-            if (origin.equals(map.get(i))){
-                return i-index+1;
+        int left =0;
+        int right =0;
+        int maxsize =1;
+        Set<String> set = new HashSet<>();
+        set.add(map.get(left));
+        for(int i=0;i<s.length()-1;++i){
+            right++;
+            left=checkDupAndMoveL(set,left,map.get(right),map);
+            set.add(map.get(right));
+            if(maxsize<right-left+1){
+                maxsize=right-left+1;
             }
         }
-        return map.size()-index;
+        return maxsize;
     }
 
     /*
-    this function check in this range does it contain any duplicated items
+    this function use set to check if there is any duplicate when new item added in
+    if duplicated, move the left pointer right by 1
      */
-    public boolean checkDuplicate(Map<Integer,String> map, int index,int length ){
-        Set<String> checkDuplicate = new HashSet<>();
-        for (int i=0;i<length-1;++i){
-            if( !checkDuplicate.contains(map.get(i+index))){
-                checkDuplicate.add(map.get(i+index));
-            }else{
-                return true;
-            }
+    public int checkDupAndMoveL (Set<String> set, int left, String newItem,
+                                 Map<Integer,String> map){
+        while(set.contains(newItem)){
+                set.remove(map.get(left));
+                left++;
         }
-        return false;
-    }
+        return left;
 
+
+    }
 }
-
