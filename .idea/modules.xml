@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode17-phonenum/leetcode17-phonenum.iml" filepath="$PROJECT_DIR$/leetcode17-phonenum/leetcode17-phonenum.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode19-removeFromEndOfLinkedList/leetcode19-removeFromEndOfLinkedList.iml" filepath="$PROJECT_DIR$/leetcode19-removeFromEndOfLinkedList/leetcode19-removeFromEndOfLinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode2/leetcode2.iml" filepath="$PROJECT_DIR$/leetcode2/leetcode2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode3-longestSubString/leetcode3-longestSubString.iml" filepath="$PROJECT_DIR$/leetcode3-longestSubString/leetcode3-longestSubString.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode357/leetcode357.iml" filepath="$PROJECT_DIR$/leetcode357/leetcode357.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode5/leetcode5.iml" filepath="$PROJECT_DIR$/leetcode5/leetcode5.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode6/leetcode6.iml" filepath="$PROJECT_DIR$/leetcode6/leetcode6.iml" />
