@@ -13,26 +13,23 @@ class Solution {
     List<List<Integer>> answerList = new LinkedList<>();
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-
-        bfs(0,target,candidates, new LinkedList<Integer>());
+        backtrack(new LinkedList<>(),target,candidates,target,0);
         return answerList;
     }
 
-    private void bfs(int sum, int target, int[]candidates
-            , List<Integer> candidateCombination){
-        if( sum > target){
+    private void backtrack( List<Integer> cur, int remain,
+                            int[] candidates, int target,int start){
+        if(remain<0){
             return;
         }
-
-        if( sum == target){
-            answerList.add(new LinkedList<>(candidateCombination));
+        if(remain==0){
+            answerList.add(new LinkedList<>(cur));
             return;
-        }else{
-            for( int i :candidates){
-                candidateCombination.add(i);
-                bfs(sum+=i,target,candidates,candidateCombination);
-            candidateCombination.remove(candidateCombination.size()-1);
-            }
+        }
+        for( int i=start;i< candidates.length;++i){
+            cur.add(candidates[i]);
+            backtrack(cur,remain-candidates[i],candidates,target,i);
+            cur.remove(cur.size()-1);
         }
     }
 }
