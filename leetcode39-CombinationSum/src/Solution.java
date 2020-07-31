@@ -1,38 +1,38 @@
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 class Solution {
 
     public static void main(String[] args) {
-        Solution s = new Solution();
-        int [] x = {2,3,5};
-        s.combinationSum(x,8);
+        Solution s= new Solution();
+        int []can = {2,3,5};
+        int tar = 8;
+        System.out.println(s.combinationSum(can,8));
     }
-    List<List<Integer>> lists = new ArrayList<>();
+
+    List<List<Integer>> answerList = new LinkedList<>();
+
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        if (candidates == null || candidates.length == 0 || target < 0) {
-            return lists;
-        }
 
-        List<Integer> list = new ArrayList<>();
-        process(candidates, target, list);
-        return lists;
+        bfs(0,target,candidates, new LinkedList<Integer>());
+        return answerList;
     }
 
-    private void process(int[] candidates, int target, List<Integer> list) {
-        if (target < 0) {
+    private void bfs(int sum, int target, int[]candidates
+            , List<Integer> candidateCombination){
+        if( sum > target){
             return;
         }
-        if (target == 0) {
-            lists.add(new ArrayList<>(list));
-        } else {
-            for (int i = 0; i < candidates.length; i++) {
-                list.add(candidates[i]);
-                //因为每个数字都可以使用无数次，所以递归还可以从当前元素开始
-                process( candidates, target - candidates[i], list);
 
+        if( sum == target){
+            answerList.add(candidateCombination);
+            return;
+        }else{
+            for( int i :candidates){
+                candidateCombination.add(i);
+                bfs(sum+=i,target,candidates,candidateCombination);
+//            candidateCombination.remove(candidateCombination.size()-1);
             }
         }
-
     }
 }
