@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Disscussion3.2/Disscussion3.2.iml" filepath="$PROJECT_DIR$/Disscussion3.2/Disscussion3.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LeetCodeWorkSpace.iml" filepath="$PROJECT_DIR$/.idea/LeetCodeWorkSpace.iml" />
       <module fileurl="file://$PROJECT_DIR$/backTracking/backTracking.iml" filepath="$PROJECT_DIR$/backTracking/backTracking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode-39CombinationSum/leetcode-39CombinationSum.iml" filepath="$PROJECT_DIR$/leetcode-39CombinationSum/leetcode-39CombinationSum.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode11/leetcode11.iml" filepath="$PROJECT_DIR$/leetcode11/leetcode11.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode1247/leetcode1247.iml" filepath="$PROJECT_DIR$/leetcode1247/leetcode1247.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode1401/leetcode1401.iml" filepath="$PROJECT_DIR$/leetcode1401/leetcode1401.iml" />
@@ -16,6 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode22-PossilbePranthese/leetcode22-PossilbePranthese.iml" filepath="$PROJECT_DIR$/leetcode22-PossilbePranthese/leetcode22-PossilbePranthese.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode3-longestSubString/leetcode3-longestSubString.iml" filepath="$PROJECT_DIR$/leetcode3-longestSubString/leetcode3-longestSubString.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode357/leetcode357.iml" filepath="$PROJECT_DIR$/leetcode357/leetcode357.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode39-CombinationSum/leetcode39-CombinationSum.iml" filepath="$PROJECT_DIR$/leetcode39-CombinationSum/leetcode39-CombinationSum.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode424LongestRepeatedLetters/leetcode424LongestRepeatedLetters.iml" filepath="$PROJECT_DIR$/leetcode424LongestRepeatedLetters/leetcode424LongestRepeatedLetters.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode5/leetcode5.iml" filepath="$PROJECT_DIR$/leetcode5/leetcode5.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode6/leetcode6.iml" filepath="$PROJECT_DIR$/leetcode6/leetcode6.iml" />
