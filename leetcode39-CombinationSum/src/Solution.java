@@ -25,13 +25,13 @@ class Solution {
         }
 
         if( sum == target){
-            answerList.add(candidateCombination);
+            answerList.add(new LinkedList<>(candidateCombination));
             return;
         }else{
             for( int i :candidates){
                 candidateCombination.add(i);
                 bfs(sum+=i,target,candidates,candidateCombination);
-//            candidateCombination.remove(candidateCombination.size()-1);
+            candidateCombination.remove(candidateCombination.size()-1);
             }
         }
     }
