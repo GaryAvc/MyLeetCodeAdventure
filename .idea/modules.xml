@@ -22,6 +22,9 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode46-Permutations/leetcode46-Permutations.iml" filepath="$PROJECT_DIR$/leetcode46-Permutations/leetcode46-Permutations.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode5/leetcode5.iml" filepath="$PROJECT_DIR$/leetcode5/leetcode5.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode6/leetcode6.iml" filepath="$PROJECT_DIR$/leetcode6/leetcode6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode77-combination/leetcode77-combination.iml" filepath="$PROJECT_DIR$/leetcode77-combination/leetcode77-combination.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode78-subset/leetcode78-subset.iml" filepath="$PROJECT_DIR$/leetcode78-subset/leetcode78-subset.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode79-WordSearch/leetcode79-WordSearch.iml" filepath="$PROJECT_DIR$/leetcode79-WordSearch/leetcode79-WordSearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode8-StringtoInteger/leetcode8-StringtoInteger.iml" filepath="$PROJECT_DIR$/leetcode8-StringtoInteger/leetcode8-StringtoInteger.iml" />
     </modules>
   </component>

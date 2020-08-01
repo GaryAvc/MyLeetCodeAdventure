@@ -12,31 +12,28 @@ class Solution {
     }
 
     List<List<Integer>> answer = new LinkedList<>();
-    List<Integer> numsList = new LinkedList<>();
     List<Integer> temp =new LinkedList<>();
 
     public List<List<Integer>> permute(int[] nums) {
 
-        for(int i:nums){
-            numsList.add(i);
-        }
-
-        backTrack(nums.length,numsList);
-
+        backTrack(nums.length,nums);
         return answer;
     }
 
-    public void backTrack( int remain,List<Integer> nums){
+    public void backTrack( int remain,int[] nums){
 
 
         if(remain==0){
-            answer.add(temp);
+            answer.add(new LinkedList<>(temp));
             return;
         }
 
-        for( int i=0;i<nums.size();i++){
-            temp.add(nums.get(i));
-            nums.remove(i);
+        for( int i=0;i<nums.length;i++){
+            if( temp.contains( nums[i])){
+                continue;
+            }
+            temp.add(nums[i]);
+//            nums.remove(i);
             backTrack( remain-1,nums);
             temp.remove(temp.size()-1);
         }
