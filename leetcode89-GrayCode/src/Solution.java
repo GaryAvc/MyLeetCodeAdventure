@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -8,54 +9,15 @@ class Solution {
         System.out.println(s.grayCode(2));
     }
 
-    List<Integer> answerNum;
-    int n;
-    List<Integer> temp;
-    List<List<Integer>> answer;
-
     public List<Integer> grayCode(int n) {
-        this.n=n;
-        temp = new LinkedList<Integer>();
-        answer = new LinkedList<>();
-        answerNum = new LinkedList<>();
-        if( n==0){
-            temp.add(0);
-            return temp;
+        List<Integer> res = new ArrayList<Integer>() {{ add(0); }};
+        int head = 1;
+        for (int i = 0; i < n; i++) {
+            for (int j = res.size() - 1; j >= 0; j--)
+                res.add(head + res.get(j));
+            head <<= 1;
         }
-
-        dfs(0);
-        translate();
-
-        return answerNum;
+        return res;
     }
 
-    private void dfs( int record ) {
-        if(record == n){
-            answer.add(new LinkedList<>(temp));
-            return;
-        }
-
-        temp.add(0);
-        dfs( record+1);
-        temp.remove(temp.size()-1);
-
-        temp.add(1);
-        dfs( record+1);
-        temp.remove(temp.size()-1);
-    }
-
-    private void translate() {
-
-        for(int outter=0;outter<answer.size();++outter){
-            int innerTotalValue=0;
-            for( int inner = 0;inner<answer.get(outter).size();++inner){
-                int innerVlaue = answer.get(outter).get(inner);
-                if(innerVlaue==1){
-                    innerTotalValue+= 1* Math.pow( 2 , answer.get(outter).size()-inner-1);
-                }
-            }
-            answerNum.add(innerTotalValue);
-        }
-
-    }
 }

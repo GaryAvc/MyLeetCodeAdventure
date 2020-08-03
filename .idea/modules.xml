@@ -27,6 +27,8 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode79-WordSearch/leetcode79-WordSearch.iml" filepath="$PROJECT_DIR$/leetcode79-WordSearch/leetcode79-WordSearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode8-StringtoInteger/leetcode8-StringtoInteger.iml" filepath="$PROJECT_DIR$/leetcode8-StringtoInteger/leetcode8-StringtoInteger.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode89-GrayCode/leetcode89-GrayCode.iml" filepath="$PROJECT_DIR$/leetcode89-GrayCode/leetcode89-GrayCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode93-RestoreIPAddresses/leetcode93-RestoreIPAddresses.iml" filepath="$PROJECT_DIR$/leetcode93-RestoreIPAddresses/leetcode93-RestoreIPAddresses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
     </modules>
   </component>
 </project>
