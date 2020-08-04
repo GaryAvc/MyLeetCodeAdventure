@@ -7,41 +7,61 @@ class Solution {
         Solution s = new Solution();
         int [] x = {4,5,6,7,0,1,2};
 
-        System.out.println(s.search( x, 5));
+        System.out.println(s.search( x, 3));
     }
-    int answerIndex;
-    int [] nums;
 
     public int search(int[] nums, int target) {
-        this.nums = nums;
-        answerIndex = binarySearch(0,target,nums.length-1);
-        return answerIndex;
-    }
 
-    private int binarySearch( int start, int targetv, int end){
-
-        int length =end-start+1;
-
-        if(length==1){
-            return start;
+        if( nums.length ==0 ){
+            return -1;
         }
 
-        int middle = start + length/2;
-
-        if( nums[middle] == targetv ){
-            return middle;
+        if( nums .length ==1 ){
+            return nums[0] == target ? 0 : -1;
         }
 
-        if( nums[middle] > targetv ){
-            return binarySearch( start, targetv,middle);
-        }else if(nums[middle]<targetv){
-            return binarySearch(middle,targetv,end);
+        int lo = 0;
+        int hi = nums.length-1;
+
+        while(lo<hi){
+
+            int mid = lo + (hi-lo)/2;
+
+            int lov = nums[lo];
+            int midv = nums[mid];
+
+            if( midv == target){
+                return mid;
+            }
+
+            if( lo == hi-1){
+                if ( nums[hi]==target){
+                    return hi;
+                }
+                break;
+            }
+
+            if( (midv >=lov) && ( target >=lov) ){
+
+                if( target < midv){
+                    hi = mid;
+                }else{
+                    lo = mid;
+                }
+
+            }else{
+
+                if( midv > target){
+                    lo = mid +1;
+                }else{
+                    hi = mid -1;
+                }
+
+            }
+
         }
 
         return -1;
     }
-
-
-
 }
 
