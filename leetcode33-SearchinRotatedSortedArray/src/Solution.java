@@ -12,60 +12,60 @@ class Solution {
 
     public int search(int[] nums, int target) {
 
-        if( nums.length ==0 ){
-            return -1;
-        }
-
-        if( nums .length ==1 ){
-            return nums[0] == target ? 0 : -1;
-        }
+        /*
+        Invirance:
+        1. check if the left or right side in increasing
+        2. check if the mid value is equal inside the while loop
+        3. after checking the left, right -- check the target posision due to comparasion with ?
+         */
 
         int lo = 0;
         int hi = nums.length-1;
 
-        while(lo<hi){
+        while( lo <= hi){
 
             int mid = lo + (hi-lo)/2;
-
-            int lov = nums[lo];
-            int midv = nums[mid];
-
-            if( midv == target){
-                return mid;
+            int midv = nums [mid];
+            if (midv == target) {
+                return mid ;
             }
 
-            if( lo == hi-1){
-                if ( nums[hi]==target){
-                    return hi;
-                }
-                break;
-            }
+            /*
+            this if checks the whether the right or left side is increasing
+             */
 
-            if((nums[mid]-nums[nums.length-1])*(target-nums[nums.length-1])>0){
+            /*
+            the left part is increasing
+             */
 
-                if( target < midv){
-                    hi = mid;
+            if ( midv >= nums[lo]){
+
+//                the target is in the increasing part, on the left
+                if( target >= nums[lo] && midv > target){
+
+                    hi = mid-1;
+
                 }else{
-                    lo = mid+1;
+
+                    lo = mid +1;
+
                 }
 
-            }else{
+            }
+            /*
+            the right is increasing
+             */
+            else{
 
-                if( midv > target){
+                if( target > midv && target <= nums[hi]  ){
                     lo = mid +1;
                 }else{
                     hi = mid -1;
                 }
-
             }
-
         }
-
-        if( nums[lo] == target){
-            return lo;
-        }
-
         return -1;
+
     }
 }
 
