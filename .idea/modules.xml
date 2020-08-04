@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode2/leetcode2.iml" filepath="$PROJECT_DIR$/leetcode2/leetcode2.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode22-PossilbePranthese/leetcode22-PossilbePranthese.iml" filepath="$PROJECT_DIR$/leetcode22-PossilbePranthese/leetcode22-PossilbePranthese.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode3-longestSubString/leetcode3-longestSubString.iml" filepath="$PROJECT_DIR$/leetcode3-longestSubString/leetcode3-longestSubString.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode33-SearchinRotatedSortedArray/leetcode33-SearchinRotatedSortedArray.iml" filepath="$PROJECT_DIR$/leetcode33-SearchinRotatedSortedArray/leetcode33-SearchinRotatedSortedArray.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode357/leetcode357.iml" filepath="$PROJECT_DIR$/leetcode357/leetcode357.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode39-CombinationSum/leetcode39-CombinationSum.iml" filepath="$PROJECT_DIR$/leetcode39-CombinationSum/leetcode39-CombinationSum.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode424LongestRepeatedLetters/leetcode424LongestRepeatedLetters.iml" filepath="$PROJECT_DIR$/leetcode424LongestRepeatedLetters/leetcode424LongestRepeatedLetters.iml" />

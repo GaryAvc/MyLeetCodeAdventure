@@ -32,17 +32,21 @@ class Solution {
             return;
         }
 
-        String thisDigit = remains.substring(0,1);
-        int thisNum =translate(prev,thisDigit);
-        if(  thisNum>255){
-            tempAnswer = tempAnswer+ ".";
-            backtrack( remain, parts+1, remains,0);
-            return;
-        }else {
-            tempAnswer = tempAnswer + thisDigit;
-            backtrack(remain - 1, parts, remains.substring(1, remains.length()), thisNum);
-            return;
+        for( int i=0;i<4;i++){
+            String thisDigit = remains.substring(0,i+1);
+            int thisNum =translate(prev,thisDigit);
+            if(  thisNum>255){
+                tempAnswer = tempAnswer+ ".";
+                backtrack( remain, parts+1, remains,0);
+            }else {
+                tempAnswer = tempAnswer + thisDigit;
+                tempAnswer = tempAnswer+ ".";
+                backtrack(remain - 1, parts+1, remains.substring(1, remains.length()), 0);
+                tempAnswer = tempAnswer.substring(0,tempAnswer.length()-2);
+            }
         }
+
+
 
 //        tempAnswer = tempAnswer + thisDigit;
 //        backtrack(remain - 1, parts, remains.substring(1, remains.length()), thisNum);
