@@ -6,8 +6,8 @@ class Solution {
     public static void main(String[] args) {
         Solution s = new Solution();
         int [] x = {4,5,6,7,0,1,2};
-
-        System.out.println(s.search( x, 3));
+        int [] y = {5,1,3};
+        System.out.println(s.search( y, 3));
     }
 
     public int search(int[] nums, int target) {
@@ -41,12 +41,12 @@ class Solution {
                 break;
             }
 
-            if( (midv >=lov) && ( target >=lov) ){
+            if((nums[mid]-nums[nums.length-1])*(target-nums[nums.length-1])>0){
 
                 if( target < midv){
                     hi = mid;
                 }else{
-                    lo = mid;
+                    lo = mid+1;
                 }
 
             }else{
@@ -59,6 +59,10 @@ class Solution {
 
             }
 
+        }
+
+        if( nums[lo] == target){
+            return lo;
         }
 
         return -1;
