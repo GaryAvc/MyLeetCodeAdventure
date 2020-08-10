@@ -17,7 +17,9 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode22-PossilbePranthese/leetcode22-PossilbePranthese.iml" filepath="$PROJECT_DIR$/leetcode22-PossilbePranthese/leetcode22-PossilbePranthese.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode3-longestSubString/leetcode3-longestSubString.iml" filepath="$PROJECT_DIR$/leetcode3-longestSubString/leetcode3-longestSubString.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode33-SearchinRotatedSortedArray/leetcode33-SearchinRotatedSortedArray.iml" filepath="$PROJECT_DIR$/leetcode33-SearchinRotatedSortedArray/leetcode33-SearchinRotatedSortedArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode34-FindFirstandLastPositionofElementinSortedArray/leetcode34-FindFirstandLastPositionofElementinSortedArray.iml" filepath="$PROJECT_DIR$/leetcode34-FindFirstandLastPositionofElementinSortedArray/leetcode34-FindFirstandLastPositionofElementinSortedArray.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode357/leetcode357.iml" filepath="$PROJECT_DIR$/leetcode357/leetcode357.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode36-ValidSudoku/leetcode36-ValidSudoku.iml" filepath="$PROJECT_DIR$/leetcode36-ValidSudoku/leetcode36-ValidSudoku.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode39-CombinationSum/leetcode39-CombinationSum.iml" filepath="$PROJECT_DIR$/leetcode39-CombinationSum/leetcode39-CombinationSum.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode424LongestRepeatedLetters/leetcode424LongestRepeatedLetters.iml" filepath="$PROJECT_DIR$/leetcode424LongestRepeatedLetters/leetcode424LongestRepeatedLetters.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode46-Permutations/leetcode46-Permutations.iml" filepath="$PROJECT_DIR$/leetcode46-Permutations/leetcode46-Permutations.iml" />
