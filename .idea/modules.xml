@@ -23,6 +23,8 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode39-CombinationSum/leetcode39-CombinationSum.iml" filepath="$PROJECT_DIR$/leetcode39-CombinationSum/leetcode39-CombinationSum.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode424LongestRepeatedLetters/leetcode424LongestRepeatedLetters.iml" filepath="$PROJECT_DIR$/leetcode424LongestRepeatedLetters/leetcode424LongestRepeatedLetters.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode46-Permutations/leetcode46-Permutations.iml" filepath="$PROJECT_DIR$/leetcode46-Permutations/leetcode46-Permutations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode48-RotateImage/leetcode48-RotateImage.iml" filepath="$PROJECT_DIR$/leetcode48-RotateImage/leetcode48-RotateImage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode49-GroupAnagrams/leetcode49-GroupAnagrams.iml" filepath="$PROJECT_DIR$/leetcode49-GroupAnagrams/leetcode49-GroupAnagrams.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode5/leetcode5.iml" filepath="$PROJECT_DIR$/leetcode5/leetcode5.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode6/leetcode6.iml" filepath="$PROJECT_DIR$/leetcode6/leetcode6.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode77-combination/leetcode77-combination.iml" filepath="$PROJECT_DIR$/leetcode77-combination/leetcode77-combination.iml" />
