@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/backTracking/backTracking.iml" filepath="$PROJECT_DIR$/backTracking/backTracking.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode-39CombinationSum/leetcode-39CombinationSum.iml" filepath="$PROJECT_DIR$/leetcode-39CombinationSum/leetcode-39CombinationSum.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode11/leetcode11.iml" filepath="$PROJECT_DIR$/leetcode11/leetcode11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode113-PathSumI/leetcode113-PathSumI.iml" filepath="$PROJECT_DIR$/leetcode113-PathSumI/leetcode113-PathSumI.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode1247/leetcode1247.iml" filepath="$PROJECT_DIR$/leetcode1247/leetcode1247.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode1401/leetcode1401.iml" filepath="$PROJECT_DIR$/leetcode1401/leetcode1401.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode15 3sum/leetcode15 3sum.iml" filepath="$PROJECT_DIR$/leetcode15 3sum/leetcode15 3sum.iml" />
@@ -26,6 +27,9 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode48-RotateImage/leetcode48-RotateImage.iml" filepath="$PROJECT_DIR$/leetcode48-RotateImage/leetcode48-RotateImage.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode49-GroupAnagrams/leetcode49-GroupAnagrams.iml" filepath="$PROJECT_DIR$/leetcode49-GroupAnagrams/leetcode49-GroupAnagrams.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode5/leetcode5.iml" filepath="$PROJECT_DIR$/leetcode5/leetcode5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode50-Powxn/leetcode50-Powxn.iml" filepath="$PROJECT_DIR$/leetcode50-Powxn/leetcode50-Powxn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode54-SpiralMatrix/leetcode54-SpiralMatrix.iml" filepath="$PROJECT_DIR$/leetcode54-SpiralMatrix/leetcode54-SpiralMatrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode55-JumpGame/leetcode55-JumpGame.iml" filepath="$PROJECT_DIR$/leetcode55-JumpGame/leetcode55-JumpGame.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode6/leetcode6.iml" filepath="$PROJECT_DIR$/leetcode6/leetcode6.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode77-combination/leetcode77-combination.iml" filepath="$PROJECT_DIR$/leetcode77-combination/leetcode77-combination.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode78-subset/leetcode78-subset.iml" filepath="$PROJECT_DIR$/leetcode78-subset/leetcode78-subset.iml" />
