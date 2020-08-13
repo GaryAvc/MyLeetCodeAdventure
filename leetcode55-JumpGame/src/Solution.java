@@ -39,9 +39,19 @@ class Solution {
             return;
         }
 
-        for ( int i=0; i<nums[start];++i){
-            canJumpHelper(nums, start+1+ i);
+        int maxLength=0;
+        int maxIndex=start;
+        for ( int i=1; i<=nums[start];++i){
+            if( start + i < nums.length){
+                int length =nums[start +i] +i;
+                if( length > maxLength){
+                    maxLength= length;
+                    maxIndex=start + i;
+                }
+            }
+
         }
+        canJumpHelper(nums, maxIndex);
     }
 
 }
