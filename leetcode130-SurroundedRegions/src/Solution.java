@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,7 +20,7 @@ class Solution {
         3. Two cells are connected if they are adjacent cells connected horizontally or vertically.
     */
 
-    Map<Integer,Integer> oindex;
+    Map<Integer, ArrayList<Integer>> oindex;
 
     public void solve(char[][] board) {
 
@@ -39,31 +40,47 @@ class Solution {
         // from left to right, row 0
         for ( int i=0;i<rightestColumn;i++){
             if( board[0][i] == 'O'){
-                oindex.put(0,i);
+                if( oindex.containsKey(0)){
+                    oindex.get(0).add(i);
+                }else{
+                    ArrayList<Integer> everyRow = new ArrayList<>(i);
+                    oindex.put( 0,everyRow);
+                }
                 addoConnected(0,i,board);
             }
-        }
-        // from left to right, row bottom Row
-        for ( int i=0;i<rightestColumn;i++){
             if( board[bottomRow-1][i] == 'O'){
-                oindex.put(bottomRow-1,i);
+                if( oindex.containsKey(bottomRow-1)){
+                    oindex.get(bottomRow-1).add(i);
+                }else{
+                    ArrayList<Integer> everyRow = new ArrayList<>(i);
+                    oindex.put( bottomRow-1,everyRow);
+                }
                 addoConnected(bottomRow-1,i,board);
             }
         }
         // from top to bottom, column 0
         for ( int i=0;i<bottomRow;i++){
-            if( board[i][0] == 'O'){
-                oindex.put(i,0);
-                addoConnected(i,0,board);
+            if( board[i][0] == 'O') {
+                if (oindex.containsKey(i)) {
+                    oindex.get(i).add(0);
+                } else {
+                    ArrayList<Integer> everyRow = new ArrayList<>(0);
+                    oindex.put(i, everyRow);
+                }
+                addoConnected(i, 0, board);
             }
-        } // from top to bottom, column rightest column
-        for ( int i=0;i<bottomRow;i++) {
-            if (board[i][rightestColumn-1] == 'O') {
-                oindex.put(i, rightestColumn-1);
+
+            if( board[i][rightestColumn-1] == 'O'){
+                if( oindex.containsKey(i)){
+                    oindex.get(i).add(rightestColumn-1);
+                }else{
+                    ArrayList<Integer> everyRow = new ArrayList<>(rightestColumn-1);
+                    oindex.put( i,everyRow);
+                }
                 addoConnected(i,rightestColumn-1,board);
             }
-        }
 
+        }
 
         for( int i =0;i< board.length;i++){
             for (int j =0;j< board[0].length;j++){
@@ -71,9 +88,15 @@ class Solution {
             }
         }
 
-       for( Map.Entry<Integer,Integer> entry : oindex.entrySet()){
-           board[ entry.getKey()][entry.getValue()] = 'O';
-       }
+       /*
+       This part set all the 'O' in map which its index, and make it into board
+        */
+        for( Map.Entry<Integer,ArrayList<Integer>> entry : oindex.entrySet()){
+            for( int i =0; i < entry.getValue().size();++i){
+                board[entry.getKey()][entry.getValue().get(i)]='O';
+            }
+
+        }
 
     }
 
@@ -83,25 +106,19 @@ class Solution {
     private void addoConnected ( int row, int column,char[][] board){
         int bottomRow = board.length;
         int rightestColumn = board[0].length;
-        if( row-1 > -1  && board[row-1][column]=='O'){
-            if( !oindex.containsKey( row-1)){
-                oindex.put( row-1,column);
-            }
+        if( row-1 > -1  && row+1 < bottomRow  && column-1 > -1  &&
+                column+1 < rightestColumn  && board[row][column]=='O') {
+
+                if( oindex.containsKey(row)){
+                    oindex.get(row).add(column);
+                }else{
+                    ArrayList<Integer> everyRow = new ArrayList<>(row);
+                    oindex.put( row,everyRow);
+                }
         }
-        if( row+1 < bottomRow  && board[row+1][column]=='O'){
-            if( !oindex.containsKey( row+1)){
-                oindex.put( row+1,column);
-            }
-        }
-        if( column-1 > -1  && board[row][column-1]=='O'){
-            if (!oindex.containsValue(column-1)) {
-                oindex.put( row,column-1);
-            }
-        }
-        if( column+1 < rightestColumn  && board[row][column+1]=='O') {
-            if (!oindex.containsValue(column+1)) {
-                oindex.put(row, column+1);
-            }
-        }
+        addoConnected( row-1,column,board);
+        addoConnected( row+1,column,board);
+        addoConnected( row-1,column-1,board);
+        addoConnected( row-1,column+1,board);
     }
 }
