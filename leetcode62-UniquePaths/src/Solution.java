@@ -1,10 +1,12 @@
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 class Solution {
 
-    int answer;
-    Map<int[], Integer> reachedLocation;
+
+    int[][] path;
+
 
     public static void main(String[] args) {
         Solution s = new Solution();
@@ -12,29 +14,38 @@ class Solution {
     }
 
     public int uniquePaths(int m, int n) {
-        answer =0;
-        reachedLocation = new HashMap<>();
+        int answer =0;
 
-        uniquePathsHelper(m,n,0,0);
+        path =new int[m][n];
+
+        answer = dp(m,n,0,0);
 
         return answer;
     }
 
-    private void uniquePathsHelper( int row, int column, int startRow,int startColumn){
+    private int dp(int m,int n,int x , int y){
 
-        // when it reach the target point
-        if( startRow == row-1 && startColumn == column -1){
-            answer++;
-            return ;
+        if( x == m || y == n){
+            return 0;
         }
 
-        // when it reach the edge, cut the branch, return
-        if( startRow == row || startColumn == column ){
-            return;
+        // if this position has been calculated and filled with numbers, just return this num
+        if(path[x][y] !=0){
+            return path[x][y];
         }
 
-        uniquePathsHelper( row,column,startRow+1,startColumn);
-        uniquePathsHelper( row,column,startRow,startColumn+1);
+        // if it reach the target, set it to 0, and return 0
+        if(x==m-1 && y==n-1  ){
+            path[x][y] = 0;
+            return 1;
+        }
+
+        path[x][y] += dp(m,n,x+1,y);
+        path[x][y] +=dp(m,n,x,y+1);
+        return path[x][y];
+
+
     }
+
 
 }
