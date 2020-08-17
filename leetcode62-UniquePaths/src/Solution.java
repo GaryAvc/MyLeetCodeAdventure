@@ -1,6 +1,10 @@
+import java.util.HashMap;
+import java.util.Map;
+
 class Solution {
 
     int answer;
+    Map<int[], Integer> reachedLocation;
 
     public static void main(String[] args) {
         Solution s = new Solution();
@@ -9,6 +13,7 @@ class Solution {
 
     public int uniquePaths(int m, int n) {
         answer =0;
+        reachedLocation = new HashMap<>();
 
         uniquePathsHelper(m,n,0,0);
 
