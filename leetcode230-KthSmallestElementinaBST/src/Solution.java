@@ -19,7 +19,6 @@ class Solution {
     public int kthSmallest(TreeNode root, int k) {
 
         Stack<TreeNode> nodes = new Stack<>();
-        List<Integer> vals = new ArrayList<>();
 
         while( root != null || !nodes.empty()){
 
@@ -29,12 +28,12 @@ class Solution {
             }
 
             root = nodes.pop();
-            vals.add(root.val);
+            k--;
+            if( k == 0 ){
+                return root.val;
+            }
             root=root.right;
         }
-
-        return vals.get(k-1);
-
-
+        return Integer.MIN_VALUE;
     }
 }
