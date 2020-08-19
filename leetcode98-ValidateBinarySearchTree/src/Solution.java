@@ -1,5 +1,6 @@
+import java.util.Stack;
 
- class TreeNode {
+class TreeNode {
       int val;
       TreeNode left;
       TreeNode right;
@@ -13,64 +14,35 @@
   }
 public class Solution {
 
-    boolean answer;
+    public static void main(String[] args) {
+        TreeNode x = new TreeNode(2,new TreeNode(1,null,null),new TreeNode(3,null,null));
+        Solution s =new Solution();
+        s.isValidBST(x);
+    }
 
     public boolean isValidBST(TreeNode root) {
 
-        answer = true;
+        Stack<TreeNode> nodes = new Stack<>();
 
-        if( root == null){
-            return true;
-        }
+       TreeNode pre = null;
+        while( root != null || !nodes.empty()){
 
-        isValidBSTHelper(root);
-
-        return answer;
-    }
-
-    /*
-    this function check the parent node Recursively,
-    check if this parent node is valid:
-        left < val, right > val
-    BaseCase: when left, right is all null
-     */
-    private void isValidBSTHelper ( TreeNode node){
-
-        // base case: when reach leaf node
-        if( node.left == null && node.right == null ){
-            return;
-        }
-
-//        // stop process below when isValid is false already
-//        if ( !isValid ){
-//            return isValid;
-//        }
-
-        // check if this node is valid
-        if( node.left == null || node.right ==null ){
-            if( node.left ==null){
-                if( node.right.val <= node.val ){
-                    answer = false;
-                    return;
-                }
-                isValidBSTHelper(node.right);
+            // this part add all left node in the stack first
+            while ( root != null ){
+                nodes.add(root);
+                root=root.left;
             }
-            if(node.right==null){
-                if ( node.left.val >= node.val){
-                    answer = false;
-                    return;
-                }
-                isValidBSTHelper(node.left);
+
+            root =  nodes.pop();
+
+            if( pre!=null && pre.val >= root.val){
+                return false;
             }
-        }else{
-           if (  node.right.val <= node.val || node.left.val  >= node.val ){
-               answer = false;
-               return;
-           }
-           isValidBSTHelper(node.left);
-           isValidBSTHelper(node.right);
+            pre = root;
+            root = root.right;
         }
 
+        return true;
     }
 
 }
