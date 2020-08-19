@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 class TreeNode {
       int val;
@@ -14,37 +15,35 @@ class TreeNode {
       }
   }
 
-
-
+// iteration SOLUTION
 class Solution {
 
-    List<Integer> answer;
-
+    public static void main(String[] args) {
+        TreeNode x = new TreeNode(1,null,new TreeNode(2,new TreeNode(3,null,null),null));
+        Solution s =  new Solution();
+        s.inorderTraversal(x);
+    }
     public List<Integer> inorderTraversal(TreeNode root) {
 
-        answer = new LinkedList<>(  );
+        List<Integer> tree = new LinkedList<>();
 
-        dfs(root);
+        Stack<TreeNode> nodes = new Stack<>();
 
-        return  answer;
+        while ( root != null || !nodes.empty()){
 
-    }
+            while( root != null){
 
-    private void dfs ( TreeNode node ){
-        if(node == null ){
-            return ;
+                nodes.push(root);
+                root=root.left;
+
+            }
+
+            root = nodes.pop();
+            tree.add(root.val);
+            root = root.right;
+
         }
 
-        // 1. get the left part
-        dfs(node.left);
-
-
-        // 2. the middle part is already conained in right and left part
-        answer.add(node.val);
-
-        // 3. get the riggtriggit[art
-        dfs(node.right);
-
+        return tree;
     }
-
 }
