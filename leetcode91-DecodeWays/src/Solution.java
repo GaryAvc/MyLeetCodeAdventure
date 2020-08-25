@@ -8,10 +8,6 @@ class Solution {
             return 0;
         }
 
-//        if( n ==1 && Integer.parseInt( s.substring(0,1))==0){
-//            return 0;
-//        }
-
         dp[0]=1;
         dp[1] = s.charAt(0) == '0' ? 0:1;
 
