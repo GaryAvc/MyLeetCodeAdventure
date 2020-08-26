@@ -1,15 +1,27 @@
 class Solution {
 
-
     int [] num;
+    int target;
+    int answer;
+
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        int[] x = {2,1};
+        int k=1;
+        s.findKthLargest(x,k);
+    }
 
     public int findKthLargest(int[] nums, int k) {
 
         num = nums;
+        target = nums.length-k;
+        answer=Integer.MIN_VALUE;
 
+        if( nums.length==1){
+            return nums[0];
+        }
         quickSort(0,nums.length-1);
-
-        return num[nums.length-k];
+        return answer;
     }
 
     /*
@@ -24,37 +36,40 @@ class Solution {
      */
     private void quickSort(int start,int end) {
 
-        if(start >= end){
-            return;
-        }
-        int smallerIndex =start-1;
-        if( start +1==end){
-            if(num[start]>num[end]){
-                int temp = num[end];
-                num[end] = num[start];
-                num[start] = temp;
-            }
-            return;
-        }else{
-            // quickSort once
-            int targetValue = num[end];
 
-            for( int  i=start;i<=end;++i){
-                if(num[i] <= targetValue || i==end){
-                    smallerIndex++;
-                    if( smallerIndex!= i){
-                        int temp = num[i];
-                        num[i] = num[smallerIndex];
-                        num[smallerIndex] = temp;
-                    }
+
+        if(!(start<end)){
+            if( start == end &&start == target){
+                answer =  num[target];
+            }
+            return ;
+        }
+
+        int smallerIndex =start-1;
+
+        // quickSort once
+        int targetValue = num[end];
+
+        for( int  i=start;i<=end;++i){
+            if(num[i] <= targetValue || i==end){
+                smallerIndex++;
+                if( smallerIndex!= i){
+                    int temp = num[i];
+                    num[i] = num[smallerIndex];
+                    num[smallerIndex] = temp;
                 }
             }
         }
 
-        quickSort(start,smallerIndex-1);
-        quickSort(smallerIndex+1,end);
+        if( smallerIndex == target){
+            answer =  num[target];
+        }
 
-
+        if( smallerIndex < target ){
+            quickSort(smallerIndex+1,end);
+        }else if(smallerIndex > target ){
+            quickSort(start,smallerIndex-1);
+        }
 
     }
 }
