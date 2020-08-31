@@ -7,6 +7,22 @@ class Solution {
     Queue<String> words;
     int answer;
 
+    public static void main(String[] args) {
+        String begin = "hit";
+        String end ="cog";
+        String[] list = {"hot","dot","dog","lot","log","cog"};
+//        ["hot","dot","dog","lot","log"]
+        List<String> lists=new LinkedList<String>();
+        lists.add("hot");
+        lists.add("dot");
+        lists.add("dog");
+        lists.add("lot");
+        lists.add("log");
+        lists.add("cog");
+
+        Solution s = new Solution() ;
+        System.out.println(s.ladderLength(begin,end,lists));
+    }
 
 /*
     Invariance:

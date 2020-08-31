@@ -4,6 +4,7 @@ import java.util.Map;
 
 class Solution {
 
+    // problem 130 prev
     public static void main(String[] args) {
         char [][]x={{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
         char [][]y =
