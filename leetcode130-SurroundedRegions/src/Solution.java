@@ -29,37 +29,39 @@ class Solution {
 
         for( int x=0;x<columnLength;++x){
             if(board[x][0]=='O'){
-                checkSurrounding(x,0,"");
+                checkSurrounding(x,0);
             }
-            if(board[x][columnLength-1]=='O'){
-                checkSurrounding(x,columnLength-1,"");
+            if(board[x][rowLength-1]=='O'){
+                checkSurrounding(x,rowLength-1);
             }
         }
 
         for( int y =1;y<rowLength-1;++y){
             if(board[0][y]=='O'){
-                checkSurrounding(0,y,"");
+                checkSurrounding(0,y);
             }
-            if(board[rowLength-1][y]=='O'){
-                checkSurrounding(rowLength-1,y,"");
+            if(board[columnLength-1][y]=='O'){
+                checkSurrounding(columnLength-1,y);
             }
         }
 
         for( int x=0;x<columnLength;x++){
             for( int y=0;y<rowLength;y++){
-                board[x][y]='X';
+                if(board[x][y]=='O'){
+                    board[x][y]='X';
+                }
+                if(board[x][y]=='A'){
+                    board[x][y]='O';
+                }
+
             }
         }
 
-        while( answer.size()!=0){
-            int[] index = answer.poll();
-            board[index[0]][index[1]]='O';
-        }
     }
 
     // this function take in a 'O' and check its surrounding is 'O',
     // if yes, push into 'O' array, if not, return
-    public void checkSurrounding(int row, int col,String lastStatus){
+    public void checkSurrounding(int row, int col){
 
         // basecase : when out of bounds
         if(!(row >=0 && col >=0 && row <columnLength && col <  rowLength) ){
@@ -72,24 +74,13 @@ class Solution {
             oIndex[0]=row;
             oIndex[1]=col;
 
-            if( !answer.contains(oIndex)){
-                answer.add(oIndex);
-            }else{
-                return;
-            }
+            board[row][col]='A';
 
-            if(!lastStatus.equals("right")){
-                checkSurrounding(row-1,col,"left");
-            }
-            if(!lastStatus.equals("top")){
-                checkSurrounding(row,col-1,"down");
-            }
-            if(!lastStatus.equals("left")){
-                checkSurrounding(row+1,col,"right");
-            }
-            if(!lastStatus.equals("down")){
-                checkSurrounding(row,col+1,"top");
-            }
+            checkSurrounding(row-1,col);
+            checkSurrounding(row,col-1);
+            checkSurrounding(row+1,col);
+            checkSurrounding(row,col+1);
+
 
         }else{
             return;
