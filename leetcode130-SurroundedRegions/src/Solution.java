@@ -1,125 +1,99 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayDeque;
+import java.util.Queue;
 
 class Solution {
 
-    // problem 130 prev
     public static void main(String[] args) {
         char [][]x={{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
-        char [][]y =
-                {{'O','O'},{'O','O'}};
+        char [][]y={{'O','O'},{'O','O'}};
         Solution s = new Solution();
         s.solve(y);
     }
 
-    /*
-    Invirance:
-        1. any 'O' on the border of the board are not flipped to 'X'
-        2. Any 'O' that is not on the border and
-         it is not connected to an 'O' on the border will be flipped to 'X'.
-        3. Two cells are connected if they are adjacent cells connected horizontally or vertically.
-    */
+    Queue<int[]> answer;
+    int rowLength;
+    int columnLength;
+    char[][] board;
 
-    Map<Integer, ArrayList<Integer>> oindex;
 
     public void solve(char[][] board) {
 
-        if( board.length<=1){
+        if( board.length == 0){
             return;
         }
 
-        oindex = new HashMap<>();
-        /*
-        this part find all 'O' on the border and store it in a MAP
-         */
-        int bottomRow = board.length;
-        int rightestColumn = board[0].length;
+        answer = new ArrayDeque<>();
+        columnLength = board.length;
+        rowLength=board[0].length;
+        this.board = board;
 
-
-
-        // from left to right, row 0
-        for ( int i=0;i<rightestColumn;i++){
-            if( board[0][i] == 'O'){
-                if( oindex.containsKey(0)){
-                    oindex.get(0).add(i);
-                }else{
-                    ArrayList<Integer> everyRow = new ArrayList<>(i);
-                    oindex.put( 0,everyRow);
-                }
-                addoConnected(0,i,board);
+        for( int x=0;x<columnLength;++x){
+            if(board[x][0]=='O'){
+                checkSurrounding(x,0,"");
             }
-            if( board[bottomRow-1][i] == 'O'){
-                if( oindex.containsKey(bottomRow-1)){
-                    oindex.get(bottomRow-1).add(i);
-                }else{
-                    ArrayList<Integer> everyRow = new ArrayList<>(i);
-                    oindex.put( bottomRow-1,everyRow);
-                }
-                addoConnected(bottomRow-1,i,board);
-            }
-        }
-        // from top to bottom, column 0
-        for ( int i=0;i<bottomRow;i++){
-            if( board[i][0] == 'O') {
-                if (oindex.containsKey(i)) {
-                    oindex.get(i).add(0);
-                } else {
-                    ArrayList<Integer> everyRow = new ArrayList<>(0);
-                    oindex.put(i, everyRow);
-                }
-                addoConnected(i, 0, board);
-            }
-
-            if( board[i][rightestColumn-1] == 'O'){
-                if( oindex.containsKey(i)){
-                    oindex.get(i).add(rightestColumn-1);
-                }else{
-                    ArrayList<Integer> everyRow = new ArrayList<>(rightestColumn-1);
-                    oindex.put( i,everyRow);
-                }
-                addoConnected(i,rightestColumn-1,board);
-            }
-
-        }
-
-        for( int i =0;i< board.length;i++){
-            for (int j =0;j< board[0].length;j++){
-                board[i][j]='X';
+            if(board[x][columnLength-1]=='O'){
+                checkSurrounding(x,columnLength-1,"");
             }
         }
 
-       /*
-       This part set all the 'O' in map which its index, and make it into board
-        */
-        for( Map.Entry<Integer,ArrayList<Integer>> entry : oindex.entrySet()){
-            for( int i =0; i < entry.getValue().size();++i){
-                board[entry.getKey()][entry.getValue().get(i)]='O';
+        for( int y =1;y<rowLength-1;++y){
+            if(board[0][y]=='O'){
+                checkSurrounding(0,y,"");
             }
-
+            if(board[rowLength-1][y]=='O'){
+                checkSurrounding(rowLength-1,y,"");
+            }
         }
 
+        for( int x=0;x<columnLength;x++){
+            for( int y=0;y<rowLength;y++){
+                board[x][y]='X';
+            }
+        }
+
+        while( answer.size()!=0){
+            int[] index = answer.poll();
+            board[index[0]][index[1]]='O';
+        }
     }
 
-    /*
-    this function add all conntected 'O' in the the oindex map
-     */
-    private void addoConnected ( int row, int column,char[][] board){
-        int bottomRow = board.length;
-        int rightestColumn = board[0].length;
-        if( row-1 > -1  && row+1 < bottomRow  && column-1 > -1  &&
-                column+1 < rightestColumn  && board[row][column]=='O') {
+    // this function take in a 'O' and check its surrounding is 'O',
+    // if yes, push into 'O' array, if not, return
+    public void checkSurrounding(int row, int col,String lastStatus){
 
-                if( oindex.containsKey(row)){
-                    oindex.get(row).add(column);
-                }else{
-                    ArrayList<Integer> everyRow = new ArrayList<>(row);
-                    oindex.put( row,everyRow);
-                }
+        // basecase : when out of bounds
+        if(!(row >=0 && col >=0 && row <columnLength && col <  rowLength) ){
+            return;
         }
-        addoConnected( row-1,column,board);
-        addoConnected( row+1,column,board);
-        addoConnected( row-1,column-1,board);
-        addoConnected( row-1,column+1,board);
+
+        if( board[row][col] == 'O'){
+
+            int [] oIndex = new int[2];
+            oIndex[0]=row;
+            oIndex[1]=col;
+
+            if( !answer.contains(oIndex)){
+                answer.add(oIndex);
+            }else{
+                return;
+            }
+
+            if(!lastStatus.equals("right")){
+                checkSurrounding(row-1,col,"left");
+            }
+            if(!lastStatus.equals("top")){
+                checkSurrounding(row,col-1,"down");
+            }
+            if(!lastStatus.equals("left")){
+                checkSurrounding(row+1,col,"right");
+            }
+            if(!lastStatus.equals("down")){
+                checkSurrounding(row,col+1,"top");
+            }
+
+        }else{
+            return;
+        }
     }
+
 }
