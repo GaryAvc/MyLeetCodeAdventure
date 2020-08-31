@@ -10,7 +10,6 @@ class Solution {
         s.solve(y);
     }
 
-    Queue<int[]> answer;
     int rowLength;
     int columnLength;
     char[][] board;
@@ -22,7 +21,6 @@ class Solution {
             return;
         }
 
-        answer = new ArrayDeque<>();
         columnLength = board.length;
         rowLength=board[0].length;
         this.board = board;
@@ -70,10 +68,6 @@ class Solution {
 
         if( board[row][col] == 'O'){
 
-            int [] oIndex = new int[2];
-            oIndex[0]=row;
-            oIndex[1]=col;
-
             board[row][col]='A';
 
             checkSurrounding(row-1,col);
@@ -81,9 +75,6 @@ class Solution {
             checkSurrounding(row+1,col);
             checkSurrounding(row,col+1);
 
-
-        }else{
-            return;
         }
     }
 
