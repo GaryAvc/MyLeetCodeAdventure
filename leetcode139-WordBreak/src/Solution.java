@@ -62,18 +62,18 @@ class Solution {
     }
 
     // recurive to solve the prob.
-    private void helper(String s){
+    private boolean helper(String s){
 
         //basecase: if s is empty, return true
         if(s.length()==0){
             answer=true;
-            return;
+            return true;
         }
 
         char[] target =s.toCharArray();
         // base case: if the word input, does not contain the first char in the map, it can not be a solution
         if( !firstLetter.containsKey(target[0]) ){
-            return;
+            return false ;
         }
 
         List<char[]> words = firstLetter.get(target[0]);
@@ -90,9 +90,11 @@ class Solution {
                     continue outerLoop;
                 }
             }
-            helper(s.substring(word.length, target.length));
+            if(helper(s.substring(word.length, target.length))){
+                return true;
+            }
         }
 
-        return;
+        return false;
     }
 }
