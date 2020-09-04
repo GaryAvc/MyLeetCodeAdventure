@@ -110,19 +110,32 @@ class LRUCache {
 
         // renew the age if the key exists
 
-
-
-        if(age.size()>=size){
-            int removedKey = age.poll();
-            age.add(key);
-            if(putOperation){
-                map.remove(removedKey);
+        if( putOperation){
+            if(age.size()>=size){
+                int removedKey = age.poll();
+                age.add(key);
+                map.remove((removedKey));
+            }else{
+                if(!age.contains(key)){
+                    age.add(key);
+                }
             }
         }else{
-            if(!age.contains(key)){
-                age.add(key);
-            }
+            age.remove(key);
+            age.add(key);
         }
+
+//        if(age.size()>=size){
+//            int removedKey = age.poll();
+//            age.add(key);
+//            if(putOperation){
+//                map.remove(removedKey);
+//            }
+//        }else{
+//            if(!age.contains(key)){
+//                age.add(key);
+//            }
+//        }
 
     }
 }
