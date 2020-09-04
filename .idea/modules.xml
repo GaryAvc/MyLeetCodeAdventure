@@ -20,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode138-CopyListwithRandomPointer/leetcode138-CopyListwithRandomPointer.iml" filepath="$PROJECT_DIR$/leetcode138-CopyListwithRandomPointer/leetcode138-CopyListwithRandomPointer.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode139-WordBreak/leetcode139-WordBreak.iml" filepath="$PROJECT_DIR$/leetcode139-WordBreak/leetcode139-WordBreak.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode1401/leetcode1401.iml" filepath="$PROJECT_DIR$/leetcode1401/leetcode1401.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode146-LRUCache/leetcode146-LRUCache.iml" filepath="$PROJECT_DIR$/leetcode146-LRUCache/leetcode146-LRUCache.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode15 3sum/leetcode15 3sum.iml" filepath="$PROJECT_DIR$/leetcode15 3sum/leetcode15 3sum.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode162-FindPeakElement/leetcode162-FindPeakElement.iml" filepath="$PROJECT_DIR$/leetcode162-FindPeakElement/leetcode162-FindPeakElement.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode17-phonenum/leetcode17-phonenum.iml" filepath="$PROJECT_DIR$/leetcode17-phonenum/leetcode17-phonenum.iml" />
