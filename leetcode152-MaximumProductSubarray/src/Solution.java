@@ -2,46 +2,34 @@ class Solution {
 
     public static void main(String[] args) {
         Solution s = new Solution();
-        int[] x = {-2};
-        s.maxProduct(x);
+        int[]x={1,2,5,-1,0,-3};
+        System.out.println(s.maxProduct(x));
     }
-
     /*
     Invariance:
-        1. 2 negative nums mul together can be positive
-        2. the time result should compare with the biggest num in the array
-        3. loop the array, hold one variable for max Single nums, one max product for the max product
-        4. 3 adjcent also count, where range from 1 to length-2
-        5. assign 1 more memory to store the 3 max Value
+        1. make a record of max value, min value
+        2. start from index 1 to the end of the array
+        3.
      */
-
-
     public int maxProduct(int[] nums) {
 
-        int maxNum=Integer.MIN_VALUE;
-        int maxProduct = Integer.MIN_VALUE;
-        int maxThree = Integer.MIN_VALUE;
+        int answer = nums[0];
+        int max = nums[0];
+        int min =nums[0];
 
-        // loop the array to record the max product, and max num but left the last one uncount
-        for ( int i=0;i<nums.length;i++){
+        for( int i =1;i<nums.length;++i){
 
+            int temp = max;
+            // when
+            max = Math.max(Math.max(max*nums[i],min*nums[i]),nums[i]);
+            min = Math.min(Math.min(temp*nums[i],min*nums[i]),nums[i]);
 
-            maxNum=Math.max(maxNum,nums[i]);
-
-            // 2 nums production
-            if(i<nums.length-1){
-                int product = nums[i]*nums[i+1];
-                maxProduct=Math.max(maxProduct,product);
+            if( answer < max){
+                answer = max;
             }
-
-            // 3 nums production
-            if( i >=1 && i<=nums.length-2){
-                maxThree = Math.max(maxThree, nums[i-1]*nums[i]*nums[i+1]);
-            }
-
         }
 
-        return  Math.max(Math.max(maxNum,maxProduct),maxThree);
-    }
+        return answer;
 
+    }
 }
