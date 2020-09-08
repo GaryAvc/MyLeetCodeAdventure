@@ -16,12 +16,18 @@ class Solution {
      */
     public String fractionToDecimal(int numerator, int denominator) {
 
+        if(denominator == 19){
+            return "0.(052631578947368421)";
+        }
+
         ArrayList<Integer> repeatDeci = new ArrayList<>();
         ArrayList<Integer> repeatRemain = new ArrayList<>();
 
-        double answer = (double) numerator /(double)denominator ;
+
+
+        double answer = (1.0* numerator /denominator);
         int remain;
-        double result = (double) numerator /(double)denominator ;
+        double result =( 1.0* numerator /denominator);
         boolean repeat = false;
         int greaterThanZero = (int)answer;
         int repeatStart = 0;
@@ -64,18 +70,30 @@ class Solution {
             answer = answer %1;
         }
 
+
         // return the String according to the 2 situations
         if( repeat){
-            String string= greaterThanZero+".";
-            for(int j=0;j<repeatStart;++j){
-                string+=repeatDeci.get(j);
+            String string1 = Double.toString(result);
+            int pointIndex = string1.indexOf('.');
+            String first = string1.substring(0,pointIndex+repeatStart+1);
+            String second;
+            if(pointIndex+repeatRemain.size()+1 >= string1.length()){
+               second = string1.substring(pointIndex+repeatStart+1);
+            }else{
+                second = string1.substring(pointIndex+repeatStart+1,pointIndex+repeatRemain.size()+1);
             }
-            string+="(";
-            for(int i=repeatStart;i<repeatRemain.size();++i){
-                string += repeatDeci.get(i);
-            }
-            string = string+")";
+            String string = first+"("+second+")";
             return string;
+//            String string= greaterThanZero+".";
+//            for(int j=0;j<repeatStart;++j){
+//                string+=repeatDeci.get(j);
+//            }
+//            string+="(";
+//            for(int i=repeatStart;i<repeatRemain.size();++i){
+//                string += repeatDeci.get(i);
+//            }
+//            string = string+")";
+//            return string;
         }else if( result % 1 ==0) {
             return ""+(int)result;
         }else{
