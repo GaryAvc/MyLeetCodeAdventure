@@ -1,64 +1,82 @@
-import org.junit.Test;
 
-import java.util.ArrayList;
 
-import static org.junit.Assert.*;
+import java.util.*;
+
 
 class Solution {
 
-    ArrayList<Integer> zero = new ArrayList<>();
-    ArrayList<Integer> one = new ArrayList<>();
-    ArrayList<Integer> two = new ArrayList<>();
-    ArrayList<Integer> three = new ArrayList<>();
-    ArrayList<Integer> four = new ArrayList<>();
-    ArrayList<Integer> five = new ArrayList<>();
-    ArrayList<Integer> six = new ArrayList<>();
-    ArrayList<Integer> seven = new ArrayList<>();
-    ArrayList<Integer> eight = new ArrayList<>();
-    ArrayList<Integer> nine = new ArrayList<>();
+    public static void main(String[] args) {
+        int [] x ={121,12};
+        Solution s = new Solution();
+        s.largestNumber(x);
+    }
 
     /*
     Invariance:
-        1. we iterate the whole array, and get the nums with the same start number
-        2. we check the nums with  the same start num, if the second digit is different then push it into string,
-        3. we divide the num into 2 parts, the first part is the same part, the second part is the diffreent part
-        4. if the same part is the last digit, continuously, use the same part as the different part for comparation until one digit is different
+        1. first, loop the nums array to get the longest num, Then, loop again, extend every num to be this long by adding the origin digits
+        2. if the same part is the last digit, continuously, use the same part as the different part for comparation until one digit is different
             {e.g 3456 - 34563459 'same-3456' keep compare '34563456 - 34563459' we see that 34563459 is larger}
+        3. use a Hashmap to store the relationship between the new value and original index { key - new int value, value - origin index []}
+            (1) if the size of  index[] is greater than 1, then add index[0] value {size()} times into the String, since we dont care which one
+                we are adding
      */
     public String largestNumber(int[] nums) {
 
         String answer = "";
+        Arrays.sort(nums);
+        int maxLength = ((Integer)nums[0]).toString().length();
+        int [] newNums = new int[nums.length];
+        Map<Integer,List<Integer>> map = new HashMap<>();
 
-        // loop the nums array
+        // loop the nums array & extend the nums
         for(int i =0;i<nums.length;i++){
-            switch (xDigit(0, nums[i])){
-                case 0: zero.add(nums[i]);break;
-                case 1: one.add(nums[i]);break;
-                case 2: two.add(nums[i]);break;
-                case 3: three.add(nums[i]);break;
-                case 4: four.add(nums[i]);break;
-                case 5: five.add(nums[i]);break;
-                case 6: six.add(nums[i]);break;
-                case 7: seven.add(nums[i]);break;
-                case 8: eight.add(nums[i]);break;
-                case 9: nine.add(nums[i]);break;
-                default:break;
+            int tempNum = nums[i];
+
+            // extends the num using its existing digit
+            String originDigits =((Integer) tempNum).toString();
+            int length = originDigits.length();
+            int times = maxLength/length;
+            int remain = maxLength%length;
+            String extend = "";
+            for( int j =0;j<times;j++){
+                extend+=originDigits;
             }
+            extend+=originDigits.substring(0,remain+1);
+            int newNum =Integer.parseInt(extend);
+
+            // put it in new array
+            newNums[i]=newNum;
+
+            // set the relationship in the map
+            if( map.containsKey(newNum)){
+                map.get(newNum).add(i);
+            }else{
+                List<Integer> indexArray = new LinkedList<>();
+                indexArray.add(i);
+                map.put(newNum,indexArray);
+            }
+
         }
 
+        // sort the new array (which in here the nums are sort)
+        Arrays.sort(newNums);
+
+        // use the sorted value to get original index, then use the index to put the original int into the answer String
+        for( int i =newNums.length-1;i>=0;i--){
+            int newValue = newNums[i];
+            List<Integer> list = map.get(newValue);
+            int index =list.get(0);
+            int originalVal = nums[index];
+
+            // if the size of the returning list is > 1, then add {size()} times into the answer string
+            for( int j=0;j<list.size();j++){
+                answer+=((Integer)originalVal).toString();
+            }
+        }
 
         return answer;
     }
 
-    // return the value of digit at x index
-    private int xDigit(int index,int num){
-        String s = String.valueOf(num);
-        s=s.substring(index,index+1);
-        return Integer.parseInt(s);
-    }
 
-    // this function take in the array of nums that has the same first digit and push the every nums into answer String in order
-    private void pushArray(ArrayList<Integer> arrayList){
 
-    }
 }
