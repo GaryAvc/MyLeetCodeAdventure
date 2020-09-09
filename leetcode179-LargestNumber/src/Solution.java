@@ -5,12 +5,6 @@ import java.util.*;
 
 class Solution {
 
-    public static void main(String[] args) {
-        int [] x ={0,0};
-        Solution s = new Solution();
-        s.largestNumber(x);
-    }
-
     /*
     Invariance:
         1. first, loop the nums array to get the longest num, Then, loop again, extend every num to be this long by adding the origin digits
@@ -25,7 +19,11 @@ class Solution {
         String answer = "";
         Set<Integer> usedIndex = new HashSet<>();
         Arrays.sort(nums);
-        int maxLength = ((Integer)nums[0]).toString().length();
+        // special case: if the greatest num is 0, then just return "0"
+        if(nums[nums.length-1] ==0){
+            return "0";
+        }
+        int maxLength = ((Integer)nums[nums.length-1]).toString().length();
         long [] newNums = new long[nums.length];
         Map<Long,List<Integer>> map = new HashMap<>();
 
@@ -65,18 +63,22 @@ class Solution {
         // use the sorted value to get original index, then use the index to put the original int into the answer String
         for( int i =newNums.length-1;i>=0;i--){
             Long newValue = newNums[i];
+            int length = answer.length();
             List<Integer> list = map.get(newValue);
-
 
             // if the size of the returning list is > 1, then add {size()} times into the answer string
             for( int j=0;j<list.size();j++){
                 // every index to original list in here
                 int index =list.get(j);
+                int originalVal = nums[index];
+
                 if( usedIndex.contains(index)){
                     continue;
                 }else{
-                    int originalVal = nums[index];
+                    length = answer.length();
+
                     answer+=((Integer)originalVal).toString();
+                    length = answer.length();
                     usedIndex.add(index);
                 }
 
