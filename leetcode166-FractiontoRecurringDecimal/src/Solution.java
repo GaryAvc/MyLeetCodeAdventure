@@ -3,7 +3,7 @@ import java.util.ArrayList;
 class Solution {
     public static void main(String[] args) {
         Solution s = new Solution();
-        System.out.println(s.fractionToDecimal(1,19));
+        System.out.println(s.fractionToDecimal(7,-12));
     }
     /*
     Invariance:
@@ -16,88 +16,83 @@ class Solution {
      */
     public String fractionToDecimal(int numerator, int denominator) {
 
-        if(denominator == 19){
-            return "0.(052631578947368421)";
+        long numerator1 = (long)numerator;
+        long denominator1 = (long)denominator;
+
+        ArrayList<Long> repeatDeci = new ArrayList<>();
+        ArrayList<Long> repeatRemain = new ArrayList<>();
+        String s = "";
+
+        // answer - is the record of the whole nums, remainder - is the every time remainder
+        long answer = numerator1 / denominator1;
+        answer=Math.abs(answer);
+        long remainder = numerator1 % denominator1;
+
+        if( numerator1 * denominator1 >=0){
+            // initial the part that is >0 and the .
+            s = s+answer +".";
+        }else{
+            s= s+"-"+answer+".";
         }
 
-        ArrayList<Integer> repeatDeci = new ArrayList<>();
-        ArrayList<Integer> repeatRemain = new ArrayList<>();
 
-
-
-        double answer = (1.0* numerator /denominator);
-        int remain;
-        double result =( 1.0* numerator /denominator);
         boolean repeat = false;
-        int greaterThanZero = (int)answer;
+
         int repeatStart = 0;
 
-        // cut the part is greater than 0
-        while(answer>10){
-            answer = answer % 1;
-        }
-
         // initial the repeatDeci array, put the index 0
-        answer=answer*10;
-        int firstDeci =(int) answer;
-        repeatDeci.add(firstDeci);
-        answer = answer %1;
-
         // initial the remain array, put the index 0
-        remain = (int) ((double) numerator % denominator);
-        repeatRemain.add(remain);
+        repeatRemain.add(remainder);
+        remainder= remainder*10;
+        answer = (remainder)/ (denominator1);
+        answer = Math.abs(answer);
+        remainder =(remainder) % (denominator1);
+        remainder = Math.abs(remainder);
+        repeatRemain.add(remainder);
+
+        repeatDeci.add(answer);
+
 
         // if it reach the end, situation 1, just return the String
         // if it reach another first decimal, put the first part and {( array[] )}
-        while(answer!=0){
+        while(remainder!=0){
+
+            remainder= remainder*10;
+            answer = remainder /  Math.abs(denominator1);
+            remainder = remainder %  Math.abs(denominator1);
 
             // put every decimal properly in to the array
-            answer = answer*10;
-            int deci =(int) (answer%10);
-
             // keep check every remainder, if repeated, write the start and {end-1}, that is the repeat part
-            remain = remain *10;
-            remain = remain % denominator;
-            if(!repeatRemain.contains(remain)){
-                repeatRemain.add(remain);
-                repeatDeci.add(deci);
+            if(!repeatRemain.contains(remainder)){
+                repeatRemain.add(remainder);
+                repeatDeci.add(answer);
             }else{
                 repeat=true;
-                repeatStart = repeatRemain.indexOf(remain);
+                repeatStart = repeatRemain.indexOf(remainder);
+                repeatDeci.add(answer);
                 break;
             }
-
-            answer = answer %1;
         }
 
 
         // return the String according to the 2 situations
         if( repeat){
-            String string1 = Double.toString(result);
-            int pointIndex = string1.indexOf('.');
-            String first = string1.substring(0,pointIndex+repeatStart+1);
-            String second;
-            if(pointIndex+repeatRemain.size()+1 >= string1.length()){
-               second = string1.substring(pointIndex+repeatStart+1);
-            }else{
-                second = string1.substring(pointIndex+repeatStart+1,pointIndex+repeatRemain.size()+1);
+            for(int j=0;j<repeatStart;++j){
+                s+=repeatDeci.get(j);
             }
-            String string = first+"("+second+")";
-            return string;
-//            String string= greaterThanZero+".";
-//            for(int j=0;j<repeatStart;++j){
-//                string+=repeatDeci.get(j);
-//            }
-//            string+="(";
-//            for(int i=repeatStart;i<repeatRemain.size();++i){
-//                string += repeatDeci.get(i);
-//            }
-//            string = string+")";
-//            return string;
-        }else if( result % 1 ==0) {
-            return ""+(int)result;
+            s+="(";
+            for(int i=repeatStart;i<repeatDeci.size();++i){
+                s += repeatDeci.get(i);
+            }
+            s = s+")";
+            return s;
+        }else if( (numerator1/(double)denominator1) % 1 ==0) {
+            return ""+numerator1/denominator1;
         }else{
-            return ""+result;
+            for(int j=0;j< repeatDeci.size();++j){
+                s+=repeatDeci.get(j);
+            }
+            return s;
         }
 
     }
