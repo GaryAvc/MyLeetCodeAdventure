@@ -6,7 +6,7 @@ import java.util.*;
 class Solution {
 
     public static void main(String[] args) {
-        int [] x ={121,12};
+        int [] x ={0,0};
         Solution s = new Solution();
         s.largestNumber(x);
     }
@@ -23,10 +23,11 @@ class Solution {
     public String largestNumber(int[] nums) {
 
         String answer = "";
+        Set<Integer> usedIndex = new HashSet<>();
         Arrays.sort(nums);
         int maxLength = ((Integer)nums[0]).toString().length();
-        int [] newNums = new int[nums.length];
-        Map<Integer,List<Integer>> map = new HashMap<>();
+        long [] newNums = new long[nums.length];
+        Map<Long,List<Integer>> map = new HashMap<>();
 
         // loop the nums array & extend the nums
         for(int i =0;i<nums.length;i++){
@@ -42,7 +43,7 @@ class Solution {
                 extend+=originDigits;
             }
             extend+=originDigits.substring(0,remain+1);
-            int newNum =Integer.parseInt(extend);
+            Long newNum =Long.parseLong(extend);
 
             // put it in new array
             newNums[i]=newNum;
@@ -63,20 +64,25 @@ class Solution {
 
         // use the sorted value to get original index, then use the index to put the original int into the answer String
         for( int i =newNums.length-1;i>=0;i--){
-            int newValue = newNums[i];
+            Long newValue = newNums[i];
             List<Integer> list = map.get(newValue);
-            int index =list.get(0);
-            int originalVal = nums[index];
+
 
             // if the size of the returning list is > 1, then add {size()} times into the answer string
             for( int j=0;j<list.size();j++){
-                answer+=((Integer)originalVal).toString();
+                // every index to original list in here
+                int index =list.get(j);
+                if( usedIndex.contains(index)){
+                    continue;
+                }else{
+                    int originalVal = nums[index];
+                    answer+=((Integer)originalVal).toString();
+                    usedIndex.add(index);
+                }
+
             }
         }
 
         return answer;
     }
-
-
-
 }
