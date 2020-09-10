@@ -65,12 +65,6 @@ class Solution {
 
             dfs(course);
             highLevelCourse.remove(course);
-//            ArrayList<Integer> prereqs = map.get(course);
-//            for (int req: prereqs) {
-//                if( map.containsKey(req)&& map.get(req).contains(course)){
-//                    return false;
-//                }
-//            }
         }
 
 
@@ -80,7 +74,7 @@ class Solution {
     private void dfs(int course) {
 
         // base case : when map do NOT conatin this course (which means it does NOT have any prereqs)
-        if(!map.containsKey(course)){
+        if(!map.containsKey(course) || answer==false){
             return;
         }
 
@@ -94,12 +88,8 @@ class Solution {
 
         ArrayList<Integer> prereqs = map.get(course);
         for (int prereq: prereqs) {
-//            highLevelCourse.add(prereq);
             dfs(prereq);
             highLevelCourse.remove(prereq);
         }
-
-
-
     }
 }
