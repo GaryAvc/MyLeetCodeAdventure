@@ -1,90 +1,41 @@
-
-
-import java.util.*;
-
+import java.util.Arrays;
+import java.util.Comparator;
 
 class Solution {
 
-    /*
-    Invariance:
-        1. first, loop the nums array to get the longest num, Then, loop again, extend every num to be this long by adding the origin digits
-        2. if the same part is the last digit, continuously, use the same part as the different part for comparation until one digit is different
-            {e.g 3456 - 34563459 'same-3456' keep compare '34563456 - 34563459' we see that 34563459 is larger}
-        3. use a Hashmap to store the relationship between the new value and original index { key - new int value, value - origin index []}
-            (1) if the size of  index[] is greater than 1, then add index[0] value {size()} times into the String, since we dont care which one
-                we are adding
-     */
-    public String largestNumber(int[] nums) {
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        int []x ={10,2};
+        System.out.println(s.largestNumber(x));
+    }
+    class combineString implements Comparator<String>{
+        @Override
+        public int compare(String s1, String s2) {
+            String str1 = s1+s2;
+            String str2 = s2+s1;
 
-        String answer = "";
-        Set<Integer> usedIndex = new HashSet<>();
-        Arrays.sort(nums);
-        // special case: if the greatest num is 0, then just return "0"
-        if(nums[nums.length-1] ==0){
+            return str2.compareTo(str1);
+        }
+    }
+
+    public String largestNumber(int[] nums) {
+        String [] stringArray = new String[nums.length];
+        String answer;
+        for(int i =0;i<nums.length;i++ ){
+            stringArray[i] = String.valueOf(nums[i]);
+        }
+
+        Arrays.sort(stringArray,new combineString());
+
+        if(stringArray[0].equals("0")){
             return "0";
         }
-        int maxLength = ((Integer)nums[nums.length-1]).toString().length();
-        long [] newNums = new long[nums.length];
-        Map<Long,List<Integer>> map = new HashMap<>();
 
-        // loop the nums array & extend the nums
-        for(int i =0;i<nums.length;i++){
-            int tempNum = nums[i];
-
-            // extends the num using its existing digit
-            String originDigits =((Integer) tempNum).toString();
-            int length = originDigits.length();
-            int times = maxLength/length;
-            int remain = maxLength%length;
-            String extend = "";
-            for( int j =0;j<times;j++){
-                extend+=originDigits;
-            }
-            extend+=originDigits.substring(0,remain+1);
-            Long newNum =Long.parseLong(extend);
-
-            // put it in new array
-            newNums[i]=newNum;
-
-            // set the relationship in the map
-            if( map.containsKey(newNum)){
-                map.get(newNum).add(i);
-            }else{
-                List<Integer> indexArray = new LinkedList<>();
-                indexArray.add(i);
-                map.put(newNum,indexArray);
-            }
-
+        StringBuilder sb = new StringBuilder();
+        for (String s:stringArray
+             ) {
+            sb.append(s);
         }
-
-        // sort the new array (which in here the nums are sort)
-        Arrays.sort(newNums);
-
-        // use the sorted value to get original index, then use the index to put the original int into the answer String
-        for( int i =newNums.length-1;i>=0;i--){
-            Long newValue = newNums[i];
-            int length = answer.length();
-            List<Integer> list = map.get(newValue);
-
-            // if the size of the returning list is > 1, then add {size()} times into the answer string
-            for( int j=0;j<list.size();j++){
-                // every index to original list in here
-                int index =list.get(j);
-                int originalVal = nums[index];
-
-                if( usedIndex.contains(index)){
-                    continue;
-                }else{
-                    length = answer.length();
-
-                    answer+=((Integer)originalVal).toString();
-                    length = answer.length();
-                    usedIndex.add(index);
-                }
-
-            }
-        }
-
-        return answer;
+        return sb.toString();
     }
 }
