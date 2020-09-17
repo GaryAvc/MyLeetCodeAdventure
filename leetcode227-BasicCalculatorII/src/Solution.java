@@ -19,21 +19,21 @@ class Solution {
 
     public static void main(String[] args) {
         Solution s = new Solution();
-        System.out.println( s.calculate("3/2"));
+        System.out.println( s.calculate("1+1+1"));
     }
 
     Queue<Integer> tempNum;
     Queue<String>   tempOperator;
     Queue<String> finalOperator;
     Queue<Integer> finalNum;
-    int lastNum;
+    StringBuilder sb;
 
     public int calculate(String s) {
         tempNum = new ArrayDeque<>();
         tempOperator = new ArrayDeque<>();
         finalOperator = new ArrayDeque<>();
         finalNum = new ArrayDeque<>();
-        lastNum=0;
+        sb=new StringBuilder();
 
         int answer=0;
 
@@ -42,22 +42,17 @@ class Solution {
         // loop through every letter of the string and parse one num and one operator everytime
         for( int i =0;i<letters.length;i++){
 
+
             if(letters[i]=='*'||letters[i]=='/'||letters[i]=='+'||letters[i]=='-' || i == letters.length-1){
                 // add the last num
-
-                if(i== letters.length-1) {
-                    i++;
+                if(i==letters.length-1&&letters[letters.length-1]!=' '){
+                    sb.append(letters[letters.length-1]);
                 }
                 // parse the int before the operator
-                String numS = s.substring(lastNum,i);
-                int num;
-                try{
-                     num= Integer.parseInt(numS);
-                }catch (Exception e ){
-                    return 0;
-                }
+                String numS = sb.toString();
+                int num= Integer.parseInt(numS);
+                sb=new StringBuilder();
 
-                lastNum = i+1;
 
                 // push this pair of num and operator into the temp queue
                 tempNum.add(num);
@@ -89,16 +84,19 @@ class Solution {
                     }
                 }
 
-                if(i == letters.length){
+                if(i == letters.length-1){
                     finalNum.add(tempNum.poll());
                 }
+            }else if(letters[i]!=' '){
+                sb.append(letters[i]);
             }
         }
 
         // initial the answer
         answer = finalNum.poll();
         // now add up the final +/- queue to the answer
-        for (int i =0;i< finalOperator.size();i++){
+        int size = finalOperator.size();
+        for (int i =0;i< size;i++){
             String operator = finalOperator.poll();
             int num = finalNum.poll();
             if(operator.equals("+")){
