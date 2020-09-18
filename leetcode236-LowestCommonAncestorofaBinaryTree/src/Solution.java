@@ -42,11 +42,11 @@ public class Solution {
         stackP.push(root);
         stackQ.push(root);
         // find 2 nodes
-        dfs(root,p,stackP);
+        dfs(root,p,new Stack<TreeNode>(),0);
 
         // reset found value
         found =false;
-        dfs(root,q,stackQ);
+        dfs(root,q,new Stack<TreeNode>(),1);
 
         // check the 2 stack to see the lowerst common ancestor
         int sizep = stackP.size();
@@ -72,7 +72,7 @@ public class Solution {
     }
 
     // find the target and record the parent
-    private void dfs(TreeNode parent, TreeNode target, Stack<TreeNode> stack) {
+    private void dfs(TreeNode parent, TreeNode target, Stack<TreeNode> stack, int type) {
 
         // base case: when the node is target node, or this node is null
         if( parent == null ){
@@ -81,7 +81,15 @@ public class Solution {
 
         if(parent == target){
             found = true;
-            return;
+
+            // modify the stack
+            if(type==1){
+                stackQ.addAll(stack);
+            }else{
+                stackP.addAll(stack);
+            }
+
+
         }
 
         // if already found, then just return, stop
@@ -91,14 +99,14 @@ public class Solution {
 
         // recursively call the dfs with left and right child
         stack.push(parent.left);
-        dfs(parent.left,target,stack);
+        dfs(parent.left,target,stack,type);
         if (!found) {
             stack.remove(parent.left);
         }
         if (!found) {
             stack.push(parent.right);
         }
-        dfs(parent.right,target,stack);
+        dfs(parent.right,target,stack,type);
         if (!found) {
             stack.remove(parent.right);
         }
