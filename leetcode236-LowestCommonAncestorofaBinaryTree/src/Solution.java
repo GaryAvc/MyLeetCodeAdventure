@@ -32,39 +32,30 @@ public class Solution {
 
     Stack<TreeNode> stackP;
     Stack<TreeNode> stackQ;
-    Boolean found = false;
+    TreeNode p;
+    TreeNode q;
+//    Boolean found = false;
 //    TreeNode root;
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         stackP=new Stack<>();
         stackQ=new Stack<>();
+        this.p = p;
+        this.q = q;
         // initial the stack with root
         stackP.push(root);
         stackQ.push(root);
         // find 2 nodes
-        dfs(root,p,new Stack<TreeNode>(),0);
+        dfs(root,new Stack<TreeNode>());
 
-        // reset found value
-        found =false;
-        dfs(root,q,new Stack<TreeNode>(),1);
 
         // check the 2 stack to see the lowerst common ancestor
         int sizep = stackP.size();
-        int sizeq = stackQ.size();
 
-        if( sizep>sizeq) {
-            for (int i = 0; i < sizep; i++) {
-                TreeNode answer = stackP.pop();
-                if (stackQ.contains(answer)) {
-                    return answer;
-                }
-            }
-        }else{
-            for (int i = 0; i < sizeq; i++) {
-                TreeNode answer = stackQ.pop();
-                if (stackP.contains(answer)) {
-                    return answer;
-                }
+        for (int i = 0; i < sizep; i++) {
+            TreeNode answer = stackP.pop();
+            if (stackQ.contains(answer)) {
+                return answer;
             }
         }
 
@@ -72,44 +63,30 @@ public class Solution {
     }
 
     // find the target and record the parent
-    private void dfs(TreeNode parent, TreeNode target, Stack<TreeNode> stack, int type) {
+    private void dfs(TreeNode parent , Stack<TreeNode> stack ) {
 
         // base case: when the node is target node, or this node is null
         if( parent == null ){
             return;
         }
 
-        if(parent == target){
-            found = true;
-
-            // modify the stack
-            if(type==1){
-                stackQ.addAll(stack);
-            }else{
-                stackP.addAll(stack);
-            }
-
-
+        if(parent == p ){
+            stackP.addAll(stack);
         }
 
-        // if already found, then just return, stop
-        if (found){
-            return;
+        if(parent == q){
+            stackQ.addAll(stack);
         }
+
 
         // recursively call the dfs with left and right child
         stack.push(parent.left);
-        dfs(parent.left,target,stack,type);
-        if (!found) {
-            stack.remove(parent.left);
-        }
-        if (!found) {
-            stack.push(parent.right);
-        }
-        dfs(parent.right,target,stack,type);
-        if (!found) {
-            stack.remove(parent.right);
-        }
+        dfs(parent.left,stack);
+        stack.remove(parent.left);
+        stack.push(parent.right);
+        dfs(parent.right,stack);
+        stack.remove(parent.right);
+
 
     }
 
