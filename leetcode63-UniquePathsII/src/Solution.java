@@ -11,6 +11,7 @@ class Solution {
 
     private int rowLength;
     private int colLength;
+    private int[][] grid;
     private int[][] obstacleGrid;
 
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
@@ -18,6 +19,10 @@ class Solution {
         rowLength = obstacleGrid.length;
         colLength = obstacleGrid[0].length;
         this.obstacleGrid = obstacleGrid;
+        grid = new int[rowLength][colLength];
+
+        // initial the target value to be 1
+        grid[rowLength-1][colLength-1]=1;
 
 //        // initial the grid to set the obstacle value from 1 to -1
 //        for(int row = 0;row<obstacleGrid.length;row++){
@@ -28,8 +33,7 @@ class Solution {
 //            }
 //        }
 //
-//        // initial the target value to be 1
-//        obstacleGrid[rowLength-1][colLength-1]=1;
+
 
         return dp(0,0);
     }
@@ -41,15 +45,15 @@ class Solution {
             return 0;
         }
 
-        // when it reach the the target return 1
-        if(row==rowLength-1 && col==colLength-1){
-            return 1;
+        int num ;
+        // store the value into the new grid, if it already contain any value, just use it
+        if( grid[row][col]!=0){
+            return grid[row][col];
+        }else{
+            num =  dp(row+1,col)+dp(row,col+1);
+            grid[row][col] = num;
+            return num;
         }
-        //
-
-        int num =  dp(row+1,col)+dp(row,col+1);
-        return num;
-
     }
 
     public static void main(String[] args) {
