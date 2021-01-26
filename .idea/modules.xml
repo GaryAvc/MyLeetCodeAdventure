@@ -67,6 +67,7 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode62-UniquePaths/leetcode62-UniquePaths.iml" filepath="$PROJECT_DIR$/leetcode62-UniquePaths/leetcode62-UniquePaths.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode63-UniquePathsII/leetcode63-UniquePathsII.iml" filepath="$PROJECT_DIR$/leetcode63-UniquePathsII/leetcode63-UniquePathsII.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode64-MinimumPathSum/leetcode64-MinimumPathSum.iml" filepath="$PROJECT_DIR$/leetcode64-MinimumPathSum/leetcode64-MinimumPathSum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode7-ReverseInteger/leetcode7-ReverseInteger.iml" filepath="$PROJECT_DIR$/leetcode7-ReverseInteger/leetcode7-ReverseInteger.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode73-SetMatrixZeroes/leetcode73-SetMatrixZeroes.iml" filepath="$PROJECT_DIR$/leetcode73-SetMatrixZeroes/leetcode73-SetMatrixZeroes.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode75-SortColors/leetcode75-SortColors.iml" filepath="$PROJECT_DIR$/leetcode75-SortColors/leetcode75-SortColors.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode77-combination/leetcode77-combination.iml" filepath="$PROJECT_DIR$/leetcode77-combination/leetcode77-combination.iml" />
