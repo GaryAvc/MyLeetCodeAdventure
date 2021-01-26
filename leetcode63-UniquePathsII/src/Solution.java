@@ -49,7 +49,7 @@ class Solution {
         // store the value into the new grid, if it already contain any value, just use it
         if( grid[row][col]!=0){
             return grid[row][col];
-        }else{
+          }else{
             num =  dp(row+1,col)+dp(row,col+1);
             grid[row][col] = num;
             return num;

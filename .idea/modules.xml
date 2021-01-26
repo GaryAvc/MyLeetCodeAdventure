@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode120-Triangle/leetcode120-Triangle.iml" filepath="$PROJECT_DIR$/leetcode120-Triangle/leetcode120-Triangle.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode1247/leetcode1247.iml" filepath="$PROJECT_DIR$/leetcode1247/leetcode1247.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode127-WordLadder/leetcode127-WordLadder.iml" filepath="$PROJECT_DIR$/leetcode127-WordLadder/leetcode127-WordLadder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode13-RomantoInteger/leetcode13-RomantoInteger.iml" filepath="$PROJECT_DIR$/leetcode13-RomantoInteger/leetcode13-RomantoInteger.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode130-SurroundedRegions/leetcode130-SurroundedRegions.iml" filepath="$PROJECT_DIR$/leetcode130-SurroundedRegions/leetcode130-SurroundedRegions.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode131-PalindromePartitioning/leetcode131-PalindromePartitioning.iml" filepath="$PROJECT_DIR$/leetcode131-PalindromePartitioning/leetcode131-PalindromePartitioning.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode134-GasStation/leetcode134-GasStation.iml" filepath="$PROJECT_DIR$/leetcode134-GasStation/leetcode134-GasStation.iml" />
@@ -50,6 +51,8 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode34-FindFirstandLastPositionofElementinSortedArray/leetcode34-FindFirstandLastPositionofElementinSortedArray.iml" filepath="$PROJECT_DIR$/leetcode34-FindFirstandLastPositionofElementinSortedArray/leetcode34-FindFirstandLastPositionofElementinSortedArray.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode357/leetcode357.iml" filepath="$PROJECT_DIR$/leetcode357/leetcode357.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode36-ValidSudoku/leetcode36-ValidSudoku.iml" filepath="$PROJECT_DIR$/leetcode36-ValidSudoku/leetcode36-ValidSudoku.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode38/leetcode38.iml" filepath="$PROJECT_DIR$/leetcode38/leetcode38.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode38-Count and Say/leetcode38-Count and Say.iml" filepath="$PROJECT_DIR$/leetcode38-Count and Say/leetcode38-Count and Say.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode39-CombinationSum/leetcode39-CombinationSum.iml" filepath="$PROJECT_DIR$/leetcode39-CombinationSum/leetcode39-CombinationSum.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode424LongestRepeatedLetters/leetcode424LongestRepeatedLetters.iml" filepath="$PROJECT_DIR$/leetcode424LongestRepeatedLetters/leetcode424LongestRepeatedLetters.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode46-Permutations/leetcode46-Permutations.iml" filepath="$PROJECT_DIR$/leetcode46-Permutations/leetcode46-Permutations.iml" />
