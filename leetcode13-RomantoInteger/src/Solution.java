@@ -3,58 +3,31 @@ class Solution {
 
     public int romanToInt(String s) {
 
-        char[] eachChar = s.toCharArray();
+        /* Invariance:
+            1. the placement should be large -> small
+            2. if small symbol come before the large symbol, it should be the case that we do a
+            minus
+            3. IX equals 10-1 and normally XI equals 10+1
+         */
 
-        int answer=0;
+        char[] everyChar = s.toCharArray();
+        int preNum = charToInt(everyChar[0]);
+        int answer = charToInt(everyChar[0]);
 
-        for(int i =0;i<eachChar.length;i++){
-
-            char thisChar = eachChar[i];
-            if( i==eachChar.length-1){
-                answer+=charToInt(thisChar);
-            }else {
-                char nextChar = eachChar[i+1];
-                StringBuilder sb= new StringBuilder();
-                sb.append(eachChar[i]);
-                sb.append(nextChar);
-                String combine = sb.toString();
-
-                if(combine.equals("IV")){
-                    answer+=4;
-                    i++;
-                }else if(combine.equals("IX")){
-                    answer+=9;
-                    i++;
-                }else if(combine.equals("XL")){
-                    answer+=40;
-                    i++;
-                }else if(combine.equals("XC")){
-                    answer+=90;
-                    i++;
-                }else if(combine.equals("CD")){
-                    answer+=400;
-                    i++;
-                }else if(combine.equals("CM")) {
-                    answer += 900;
-                    i++;
-                }else{
-                    answer+=charToInt(thisChar);
-                }
+        for(int i=1;i<everyChar.length;i++){
+            int thisNum = charToInt(everyChar[i]);
+            if(thisNum > preNum){
+                answer = answer + thisNum - preNum - preNum;
+            }else{
+                answer += thisNum;
             }
-
+            preNum = thisNum;
         }
 
-        return answer  ;
+        return answer;
+
     }
 
-//    Symbol       Value
-//    I             1
-//    V             5
-//    X             10
-//    L             50
-//    C             100
-//    D             500
-//    M             1000
     public int charToInt(char c){
 
         int value =0;
