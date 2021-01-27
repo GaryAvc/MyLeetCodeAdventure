@@ -1,39 +1,27 @@
 class Solution {
-
     public String longestCommonPrefix(String[] strs) {
 
-        String answer= "";
-        int answerIndex = 0;
+        /*
+        invariance:
+            1. traverse the first string and traverse the whole array of string
+         */
 
-        if(strs.length<1){
+        if(strs.length==0 || strs==null){
             return "";
-        }else if ( strs.length==1){
-            return strs[0];
         }
 
-        for(int i =0;i<strs[0].length();i++){
-            if(!compareEachChar( strs, i)){
-                answerIndex = i-1;
-                break;
+        int length = strs[0].length();
+        String initialString = strs[0];
+        for(int i =0;i<length;i++){
+            char c = initialString.charAt(i);
+            for(int j=0;j<strs.length;j++){
+                // the part that i didn't think about, when 2 string goes out of another's bound
+                if(i>=strs[j].length()||c!=strs[j].charAt(i)){
+                    return initialString.substring(0,i);
+                }
             }
         }
+        return initialString;
 
-        if(answerIndex!=0){
-            answer = strs[0].substring(0,answerIndex+1);
-        }
-
-        return answer;
     }
-
-    public boolean compareEachChar(String[] strs, int index){
-        char initialChar = strs[0].charAt(index);
-        for (String s: strs
-             ) {
-            if( index >= s.length() || initialChar!= s.charAt(index)){
-                return false;
-            }
-        }
-        return true;
-    }
-
 }
