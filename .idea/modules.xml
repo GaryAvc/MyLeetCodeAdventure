@@ -65,6 +65,7 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode49-GroupAnagrams/leetcode49-GroupAnagrams.iml" filepath="$PROJECT_DIR$/leetcode49-GroupAnagrams/leetcode49-GroupAnagrams.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode5/leetcode5.iml" filepath="$PROJECT_DIR$/leetcode5/leetcode5.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode50-Powxn/leetcode50-Powxn.iml" filepath="$PROJECT_DIR$/leetcode50-Powxn/leetcode50-Powxn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode53-MaximumSubarray/leetcode53-MaximumSubarray.iml" filepath="$PROJECT_DIR$/leetcode53-MaximumSubarray/leetcode53-MaximumSubarray.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode54-SpiralMatrix/leetcode54-SpiralMatrix.iml" filepath="$PROJECT_DIR$/leetcode54-SpiralMatrix/leetcode54-SpiralMatrix.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode55-JumpGame/leetcode55-JumpGame.iml" filepath="$PROJECT_DIR$/leetcode55-JumpGame/leetcode55-JumpGame.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode56-MergeIntervals/leetcode56-MergeIntervals.iml" filepath="$PROJECT_DIR$/leetcode56-MergeIntervals/leetcode56-MergeIntervals.iml" />
