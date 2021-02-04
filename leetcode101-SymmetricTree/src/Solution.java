@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Stack;
 
 class TreeNode {
       int val;
@@ -16,6 +17,37 @@ class TreeNode {
 public class Solution {
 
     // --- iteratively ---
+    public boolean isSymmetric(TreeNode root) {
+
+        return check(root,root);
+
+    }
+
+    public boolean check( TreeNode l,TreeNode r){
+
+        Stack<TreeNode> list = new Stack();
+        list.add(l);
+        list.add(r);
+        while( list.size()!=0){
+
+            TreeNode lpop = list.pop();
+            TreeNode rpop = list.pop();
+
+            if( lpop == null && rpop == null ){
+                continue;
+            }else if (lpop ==null || rpop == null || lpop.val != rpop.val){
+                return false;
+            }else{
+                list.add( lpop.right);
+                list.add(rpop.left);
+
+                list.add(lpop.left);
+                list.add(rpop.right);
+            }
+
+        }
+        return true;
+    }
 
 
 
