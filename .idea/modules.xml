@@ -34,7 +34,6 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode179-LargestNumber/leetcode179-LargestNumber.iml" filepath="$PROJECT_DIR$/leetcode179-LargestNumber/leetcode179-LargestNumber.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode19-removeFromEndOfLinkedList/leetcode19-removeFromEndOfLinkedList.iml" filepath="$PROJECT_DIR$/leetcode19-removeFromEndOfLinkedList/leetcode19-removeFromEndOfLinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode2/leetcode2.iml" filepath="$PROJECT_DIR$/leetcode2/leetcode2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/leetcode20-ValidParentheses/leetcode20-ValidParentheses.iml" filepath="$PROJECT_DIR$/leetcode20-ValidParentheses/leetcode20-ValidParentheses.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode200-NumberofIslands/leetcode200-NumberofIslands.iml" filepath="$PROJECT_DIR$/leetcode200-NumberofIslands/leetcode200-NumberofIslands.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode207-CourseSchedule/leetcode207-CourseSchedule.iml" filepath="$PROJECT_DIR$/leetcode207-CourseSchedule/leetcode207-CourseSchedule.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode208-ImplementTrie(Prefix Tree)/leetcode208-ImplementTrie(Prefix Tree).iml" filepath="$PROJECT_DIR$/leetcode208-ImplementTrie(Prefix Tree)/leetcode208-ImplementTrie(Prefix Tree).iml" />
@@ -73,7 +72,9 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode62-UniquePaths/leetcode62-UniquePaths.iml" filepath="$PROJECT_DIR$/leetcode62-UniquePaths/leetcode62-UniquePaths.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode63-UniquePathsII/leetcode63-UniquePathsII.iml" filepath="$PROJECT_DIR$/leetcode63-UniquePathsII/leetcode63-UniquePathsII.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode64-MinimumPathSum/leetcode64-MinimumPathSum.iml" filepath="$PROJECT_DIR$/leetcode64-MinimumPathSum/leetcode64-MinimumPathSum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode69-Sqrt(x)/leetcode69-Sqrt(x).iml" filepath="$PROJECT_DIR$/leetcode69-Sqrt(x)/leetcode69-Sqrt(x).iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode7-ReverseInteger/leetcode7-ReverseInteger.iml" filepath="$PROJECT_DIR$/leetcode7-ReverseInteger/leetcode7-ReverseInteger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode70-ClimbingStairs/leetcode70-ClimbingStairs.iml" filepath="$PROJECT_DIR$/leetcode70-ClimbingStairs/leetcode70-ClimbingStairs.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode73-SetMatrixZeroes/leetcode73-SetMatrixZeroes.iml" filepath="$PROJECT_DIR$/leetcode73-SetMatrixZeroes/leetcode73-SetMatrixZeroes.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode75-SortColors/leetcode75-SortColors.iml" filepath="$PROJECT_DIR$/leetcode75-SortColors/leetcode75-SortColors.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode77-combination/leetcode77-combination.iml" filepath="$PROJECT_DIR$/leetcode77-combination/leetcode77-combination.iml" />
