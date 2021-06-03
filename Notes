@@ -1,0 +1,5 @@
+1. 108
+
+（1）可以用指针而不是用创建数组，因为这样会更简单而且可以节省EXTRA SPACE
+（2）而且base case可以用LEFT > RIGHT -> BASE CASE
+（3）对于middle, 如果middle被用了，就用MIDDLE -1 和middle +1

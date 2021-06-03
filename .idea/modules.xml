@@ -3,13 +3,17 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Disscussion3.2/Disscussion3.2.iml" filepath="$PROJECT_DIR$/Disscussion3.2/Disscussion3.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FA-hw-5.2.d/FA-hw-5.2.d.iml" filepath="$PROJECT_DIR$/FA-hw-5.2.d/FA-hw-5.2.d.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InsertionSort/InsertionSort.iml" filepath="$PROJECT_DIR$/InsertionSort/InsertionSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LeetCodeWorkSpace.iml" filepath="$PROJECT_DIR$/.idea/LeetCodeWorkSpace.iml" />
       <module fileurl="file://$PROJECT_DIR$/PracticeMergeSort/PracticeMergeSort.iml" filepath="$PROJECT_DIR$/PracticeMergeSort/PracticeMergeSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backInsertionSort/backInsertionSort.iml" filepath="$PROJECT_DIR$/backInsertionSort/backInsertionSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/backTracking/backTracking.iml" filepath="$PROJECT_DIR$/backTracking/backTracking.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode-39CombinationSum/leetcode-39CombinationSum.iml" filepath="$PROJECT_DIR$/leetcode-39CombinationSum/leetcode-39CombinationSum.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode101-SymmetricTree/leetcode101-SymmetricTree.iml" filepath="$PROJECT_DIR$/leetcode101-SymmetricTree/leetcode101-SymmetricTree.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode102-BinaryTreeLevelOrderTraversal/leetcode102-BinaryTreeLevelOrderTraversal.iml" filepath="$PROJECT_DIR$/leetcode102-BinaryTreeLevelOrderTraversal/leetcode102-BinaryTreeLevelOrderTraversal.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode105-ConstructBinaryTreefromPreorderandInorderTraversal/leetcode105-ConstructBinaryTreefromPreorderandInorderTraversal.iml" filepath="$PROJECT_DIR$/leetcode105-ConstructBinaryTreefromPreorderandInorderTraversal/leetcode105-ConstructBinaryTreefromPreorderandInorderTraversal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode108-ConvertSortedArraytoBinarySearchTree/leetcode108-ConvertSortedArraytoBinarySearchTree.iml" filepath="$PROJECT_DIR$/leetcode108-ConvertSortedArraytoBinarySearchTree/leetcode108-ConvertSortedArraytoBinarySearchTree.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode11/leetcode11.iml" filepath="$PROJECT_DIR$/leetcode11/leetcode11.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode113-PathSumI/leetcode113-PathSumI.iml" filepath="$PROJECT_DIR$/leetcode113-PathSumI/leetcode113-PathSumI.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode116-PopulatingNextRightPointersinEachNode/leetcode116-PopulatingNextRightPointersinEachNode.iml" filepath="$PROJECT_DIR$/leetcode116-PopulatingNextRightPointersinEachNode/leetcode116-PopulatingNextRightPointersinEachNode.iml" />
@@ -90,6 +94,7 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode94-BinaryTreeInorderTraversal/leetcode94-BinaryTreeInorderTraversal.iml" filepath="$PROJECT_DIR$/leetcode94-BinaryTreeInorderTraversal/leetcode94-BinaryTreeInorderTraversal.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode96-UniqueBinarySearchTrees/leetcode96-UniqueBinarySearchTrees.iml" filepath="$PROJECT_DIR$/leetcode96-UniqueBinarySearchTrees/leetcode96-UniqueBinarySearchTrees.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode98-ValidateBinarySearchTree/leetcode98-ValidateBinarySearchTree.iml" filepath="$PROJECT_DIR$/leetcode98-ValidateBinarySearchTree/leetcode98-ValidateBinarySearchTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/selectionSort/selectionSort.iml" filepath="$PROJECT_DIR$/selectionSort/selectionSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
     </modules>
   </component>
