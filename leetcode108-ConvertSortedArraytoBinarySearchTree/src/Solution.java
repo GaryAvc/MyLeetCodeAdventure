@@ -1,6 +1,7 @@
+import java.util.ArrayList;
+import java.util.List;
 
-
-  class TreeNode {
+class TreeNode {
       int val;
       TreeNode left;
       TreeNode right;
@@ -38,5 +39,8 @@ class Solution {
         Solution s = new Solution();
         int [] nums = {-10,-3,0,5,9};
         s.sortedArrayToBST(nums);
+        int [] n = new int[5];
     }
 }
+
+

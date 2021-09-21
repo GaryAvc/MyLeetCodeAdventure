@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Disscussion3.2/Disscussion3.2.iml" filepath="$PROJECT_DIR$/Disscussion3.2/Disscussion3.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/FA-hw-5.2.d/FA-hw-5.2.d.iml" filepath="$PROJECT_DIR$/FA-hw-5.2.d/FA-hw-5.2.d.iml" />
       <module fileurl="file://$PROJECT_DIR$/InsertionSort/InsertionSort.iml" filepath="$PROJECT_DIR$/InsertionSort/InsertionSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode160-/IntersectionofTwoLinkedLists/leetcode160-/IntersectionofTwoLinkedLists.iml" filepath="$PROJECT_DIR$/leetcode160-/IntersectionofTwoLinkedLists/leetcode160-/IntersectionofTwoLinkedLists.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LeetCodeWorkSpace.iml" filepath="$PROJECT_DIR$/.idea/LeetCodeWorkSpace.iml" />
       <module fileurl="file://$PROJECT_DIR$/PracticeMergeSort/PracticeMergeSort.iml" filepath="$PROJECT_DIR$/PracticeMergeSort/PracticeMergeSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/backInsertionSort/backInsertionSort.iml" filepath="$PROJECT_DIR$/backInsertionSort/backInsertionSort.iml" />
@@ -17,29 +18,48 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode11/leetcode11.iml" filepath="$PROJECT_DIR$/leetcode11/leetcode11.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode113-PathSumI/leetcode113-PathSumI.iml" filepath="$PROJECT_DIR$/leetcode113-PathSumI/leetcode113-PathSumI.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode116-PopulatingNextRightPointersinEachNode/leetcode116-PopulatingNextRightPointersinEachNode.iml" filepath="$PROJECT_DIR$/leetcode116-PopulatingNextRightPointersinEachNode/leetcode116-PopulatingNextRightPointersinEachNode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode118-Pascal'sTriangle/leetcode118-Pascal'sTriangle.iml" filepath="$PROJECT_DIR$/leetcode118-Pascal'sTriangle/leetcode118-Pascal'sTriangle.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode120-Triangle/leetcode120-Triangle.iml" filepath="$PROJECT_DIR$/leetcode120-Triangle/leetcode120-Triangle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode121-BestTimetoBuyandSellStock/leetcode121-BestTimetoBuyandSellStock.iml" filepath="$PROJECT_DIR$/leetcode121-BestTimetoBuyandSellStock/leetcode121-BestTimetoBuyandSellStock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode122-BestTimetoBuyandSellStockII/leetcode122-BestTimetoBuyandSellStockII.iml" filepath="$PROJECT_DIR$/leetcode122-BestTimetoBuyandSellStockII/leetcode122-BestTimetoBuyandSellStockII.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode1247/leetcode1247.iml" filepath="$PROJECT_DIR$/leetcode1247/leetcode1247.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode127-WordLadder/leetcode127-WordLadder.iml" filepath="$PROJECT_DIR$/leetcode127-WordLadder/leetcode127-WordLadder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode128-LongestConsecutiveSequence/leetcode128-LongestConsecutiveSequence.iml" filepath="$PROJECT_DIR$/leetcode128-LongestConsecutiveSequence/leetcode128-LongestConsecutiveSequence.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode13-RomantoInteger/leetcode13-RomantoInteger.iml" filepath="$PROJECT_DIR$/leetcode13-RomantoInteger/leetcode13-RomantoInteger.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode130-SurroundedRegions/leetcode130-SurroundedRegions.iml" filepath="$PROJECT_DIR$/leetcode130-SurroundedRegions/leetcode130-SurroundedRegions.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode131-PalindromePartitioning/leetcode131-PalindromePartitioning.iml" filepath="$PROJECT_DIR$/leetcode131-PalindromePartitioning/leetcode131-PalindromePartitioning.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode134-GasStation/leetcode134-GasStation.iml" filepath="$PROJECT_DIR$/leetcode134-GasStation/leetcode134-GasStation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode136-SingleNumber/leetcode136-SingleNumber.iml" filepath="$PROJECT_DIR$/leetcode136-SingleNumber/leetcode136-SingleNumber.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode138-CopyListwithRandomPointer/leetcode138-CopyListwithRandomPointer.iml" filepath="$PROJECT_DIR$/leetcode138-CopyListwithRandomPointer/leetcode138-CopyListwithRandomPointer.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode139-WordBreak/leetcode139-WordBreak.iml" filepath="$PROJECT_DIR$/leetcode139-WordBreak/leetcode139-WordBreak.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode14-LongestCommonPrefix/leetcode14-LongestCommonPrefix.iml" filepath="$PROJECT_DIR$/leetcode14-LongestCommonPrefix/leetcode14-LongestCommonPrefix.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode1401/leetcode1401.iml" filepath="$PROJECT_DIR$/leetcode1401/leetcode1401.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode141-LinkedListCycle/leetcode141-LinkedListCycle.iml" filepath="$PROJECT_DIR$/leetcode141-LinkedListCycle/leetcode141-LinkedListCycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode142-LinkedListCycleII/leetcode142-LinkedListCycleII.iml" filepath="$PROJECT_DIR$/leetcode142-LinkedListCycleII/leetcode142-LinkedListCycleII.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode146-LRUCache/leetcode146-LRUCache.iml" filepath="$PROJECT_DIR$/leetcode146-LRUCache/leetcode146-LRUCache.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode148-SortList/leetcode148-SortList.iml" filepath="$PROJECT_DIR$/leetcode148-SortList/leetcode148-SortList.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode15 3sum/leetcode15 3sum.iml" filepath="$PROJECT_DIR$/leetcode15 3sum/leetcode15 3sum.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode150-EvaluateReversePolishNotation/leetcode150-EvaluateReversePolishNotation.iml" filepath="$PROJECT_DIR$/leetcode150-EvaluateReversePolishNotation/leetcode150-EvaluateReversePolishNotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode152-MaximumProductSubarray/leetcode152-MaximumProductSubarray.iml" filepath="$PROJECT_DIR$/leetcode152-MaximumProductSubarray/leetcode152-MaximumProductSubarray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode153-FindMinimuminRotatedSortedArray/leetcode153-FindMinimuminRotatedSortedArray.iml" filepath="$PROJECT_DIR$/leetcode153-FindMinimuminRotatedSortedArray/leetcode153-FindMinimuminRotatedSortedArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode155-MinStack/leetcode155-MinStack.iml" filepath="$PROJECT_DIR$/leetcode155-MinStack/leetcode155-MinStack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode160-IntersectionofTwoLinkedLists/leetcode160-IntersectionofTwoLinkedLists.iml" filepath="$PROJECT_DIR$/leetcode160-IntersectionofTwoLinkedLists/leetcode160-IntersectionofTwoLinkedLists.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode162-FindPeakElement/leetcode162-FindPeakElement.iml" filepath="$PROJECT_DIR$/leetcode162-FindPeakElement/leetcode162-FindPeakElement.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode166-FractiontoRecurringDecimal/leetcode166-FractiontoRecurringDecimal.iml" filepath="$PROJECT_DIR$/leetcode166-FractiontoRecurringDecimal/leetcode166-FractiontoRecurringDecimal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode169-MajorityElement/leetcode169-MajorityElement.iml" filepath="$PROJECT_DIR$/leetcode169-MajorityElement/leetcode169-MajorityElement.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode17-phonenum/leetcode17-phonenum.iml" filepath="$PROJECT_DIR$/leetcode17-phonenum/leetcode17-phonenum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode171-ExcelSheetColumnNumber/leetcode171-ExcelSheetColumnNumber.iml" filepath="$PROJECT_DIR$/leetcode171-ExcelSheetColumnNumber/leetcode171-ExcelSheetColumnNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode172-FactorialTrailingZeroes/leetcode172-FactorialTrailingZeroes.iml" filepath="$PROJECT_DIR$/leetcode172-FactorialTrailingZeroes/leetcode172-FactorialTrailingZeroes.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode179-LargestNumber/leetcode179-LargestNumber.iml" filepath="$PROJECT_DIR$/leetcode179-LargestNumber/leetcode179-LargestNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode189-RotateArray/leetcode189-RotateArray.iml" filepath="$PROJECT_DIR$/leetcode189-RotateArray/leetcode189-RotateArray.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode19-removeFromEndOfLinkedList/leetcode19-removeFromEndOfLinkedList.iml" filepath="$PROJECT_DIR$/leetcode19-removeFromEndOfLinkedList/leetcode19-removeFromEndOfLinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode190-ReverseBits/leetcode190-ReverseBits.iml" filepath="$PROJECT_DIR$/leetcode190-ReverseBits/leetcode190-ReverseBits.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode198-HouseRobber/leetcode198-HouseRobber.iml" filepath="$PROJECT_DIR$/leetcode198-HouseRobber/leetcode198-HouseRobber.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode2/leetcode2.iml" filepath="$PROJECT_DIR$/leetcode2/leetcode2.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode200-NumberofIslands/leetcode200-NumberofIslands.iml" filepath="$PROJECT_DIR$/leetcode200-NumberofIslands/leetcode200-NumberofIslands.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode202-HappyNumber/leetcode202-HappyNumber.iml" filepath="$PROJECT_DIR$/leetcode202-HappyNumber/leetcode202-HappyNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode204-CountPrimes/leetcode204-CountPrimes.iml" filepath="$PROJECT_DIR$/leetcode204-CountPrimes/leetcode204-CountPrimes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode206-ReverseLinkedList/leetcode206-ReverseLinkedList.iml" filepath="$PROJECT_DIR$/leetcode206-ReverseLinkedList/leetcode206-ReverseLinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode207-CourseSchedule/leetcode207-CourseSchedule.iml" filepath="$PROJECT_DIR$/leetcode207-CourseSchedule/leetcode207-CourseSchedule.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode208-ImplementTrie(Prefix Tree)/leetcode208-ImplementTrie(Prefix Tree).iml" filepath="$PROJECT_DIR$/leetcode208-ImplementTrie(Prefix Tree)/leetcode208-ImplementTrie(Prefix Tree).iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode21-MergeTwoSortedLists/leetcode21-MergeTwoSortedLists.iml" filepath="$PROJECT_DIR$/leetcode21-MergeTwoSortedLists/leetcode21-MergeTwoSortedLists.iml" />
@@ -48,21 +68,38 @@
       <module fileurl="file://$PROJECT_DIR$/leetcode22-PossilbePranthese/leetcode22-PossilbePranthese.iml" filepath="$PROJECT_DIR$/leetcode22-PossilbePranthese/leetcode22-PossilbePranthese.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode227-BasicCalculatorII/leetcode227-BasicCalculatorII.iml" filepath="$PROJECT_DIR$/leetcode227-BasicCalculatorII/leetcode227-BasicCalculatorII.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode230-KthSmallestElementinaBST/leetcode230-KthSmallestElementinaBST.iml" filepath="$PROJECT_DIR$/leetcode230-KthSmallestElementinaBST/leetcode230-KthSmallestElementinaBST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode234-PalindromeLinkedList/leetcode234-PalindromeLinkedList.iml" filepath="$PROJECT_DIR$/leetcode234-PalindromeLinkedList/leetcode234-PalindromeLinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode236-LowestCommonAncestorofaBinaryTree/leetcode236-LowestCommonAncestorofaBinaryTree.iml" filepath="$PROJECT_DIR$/leetcode236-LowestCommonAncestorofaBinaryTree/leetcode236-LowestCommonAncestorofaBinaryTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode237-DeleteNodeinaLinkedList/leetcode237-DeleteNodeinaLinkedList.iml" filepath="$PROJECT_DIR$/leetcode237-DeleteNodeinaLinkedList/leetcode237-DeleteNodeinaLinkedList.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode238-ProductofArrayExceptSelf/leetcode238-ProductofArrayExceptSelf.iml" filepath="$PROJECT_DIR$/leetcode238-ProductofArrayExceptSelf/leetcode238-ProductofArrayExceptSelf.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode240-Searcha2DMatrixII/leetcode240-Searcha2DMatrixII.iml" filepath="$PROJECT_DIR$/leetcode240-Searcha2DMatrixII/leetcode240-Searcha2DMatrixII.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode242-ValidAnagram/leetcode242-ValidAnagram.iml" filepath="$PROJECT_DIR$/leetcode242-ValidAnagram/leetcode242-ValidAnagram.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode26-RemoveDuplicatesfromSortedArray/leetcode26-RemoveDuplicatesfromSortedArray.iml" filepath="$PROJECT_DIR$/leetcode26-RemoveDuplicatesfromSortedArray/leetcode26-RemoveDuplicatesfromSortedArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode268-MissingNumber/leetcode268-MissingNumber.iml" filepath="$PROJECT_DIR$/leetcode268-MissingNumber/leetcode268-MissingNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode278-FirstBadVersion/leetcode278-FirstBadVersion.iml" filepath="$PROJECT_DIR$/leetcode278-FirstBadVersion/leetcode278-FirstBadVersion.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode279-PerfectSquares/leetcode279-PerfectSquares.iml" filepath="$PROJECT_DIR$/leetcode279-PerfectSquares/leetcode279-PerfectSquares.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode28-ImplementstrStr/leetcode28-ImplementstrStr.iml" filepath="$PROJECT_DIR$/leetcode28-ImplementstrStr/leetcode28-ImplementstrStr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode283-MoveZeroes/leetcode283-MoveZeroes.iml" filepath="$PROJECT_DIR$/leetcode283-MoveZeroes/leetcode283-MoveZeroes.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode287-FindtheDuplicateNumber/leetcode287-FindtheDuplicateNumber.iml" filepath="$PROJECT_DIR$/leetcode287-FindtheDuplicateNumber/leetcode287-FindtheDuplicateNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode289-GameofLife/leetcode289-GameofLife.iml" filepath="$PROJECT_DIR$/leetcode289-GameofLife/leetcode289-GameofLife.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode3-longestSubString/leetcode3-longestSubString.iml" filepath="$PROJECT_DIR$/leetcode3-longestSubString/leetcode3-longestSubString.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode300-LongestIncreasingSubsequence/leetcode300-LongestIncreasingSubsequence.iml" filepath="$PROJECT_DIR$/leetcode300-LongestIncreasingSubsequence/leetcode300-LongestIncreasingSubsequence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode322-CoinChange/leetcode322-CoinChange.iml" filepath="$PROJECT_DIR$/leetcode322-CoinChange/leetcode322-CoinChange.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode324-WiggleSortII/leetcode324-WiggleSortII.iml" filepath="$PROJECT_DIR$/leetcode324-WiggleSortII/leetcode324-WiggleSortII.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode33-SearchinRotatedSortedArray/leetcode33-SearchinRotatedSortedArray.iml" filepath="$PROJECT_DIR$/leetcode33-SearchinRotatedSortedArray/leetcode33-SearchinRotatedSortedArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode334-IncreasingTripletSubsequence/leetcode334-IncreasingTripletSubsequence.iml" filepath="$PROJECT_DIR$/leetcode334-IncreasingTripletSubsequence/leetcode334-IncreasingTripletSubsequence.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode34-FindFirstandLastPositionofElementinSortedArray/leetcode34-FindFirstandLastPositionofElementinSortedArray.iml" filepath="$PROJECT_DIR$/leetcode34-FindFirstandLastPositionofElementinSortedArray/leetcode34-FindFirstandLastPositionofElementinSortedArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode344-ReverseString/leetcode344-ReverseString.iml" filepath="$PROJECT_DIR$/leetcode344-ReverseString/leetcode344-ReverseString.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode347-TopKFrequentElements/leetcode347-TopKFrequentElements.iml" filepath="$PROJECT_DIR$/leetcode347-TopKFrequentElements/leetcode347-TopKFrequentElements.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode350-IntersectionofTwoArraysII/leetcode350-IntersectionofTwoArraysII.iml" filepath="$PROJECT_DIR$/leetcode350-IntersectionofTwoArraysII/leetcode350-IntersectionofTwoArraysII.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode357/leetcode357.iml" filepath="$PROJECT_DIR$/leetcode357/leetcode357.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode36-ValidSudoku/leetcode36-ValidSudoku.iml" filepath="$PROJECT_DIR$/leetcode36-ValidSudoku/leetcode36-ValidSudoku.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode378-KthSmallestElementinaSortedMatrix/leetcode378-KthSmallestElementinaSortedMatrix.iml" filepath="$PROJECT_DIR$/leetcode378-KthSmallestElementinaSortedMatrix/leetcode378-KthSmallestElementinaSortedMatrix.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode38/leetcode38.iml" filepath="$PROJECT_DIR$/leetcode38/leetcode38.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode38-Count and Say/leetcode38-Count and Say.iml" filepath="$PROJECT_DIR$/leetcode38-Count and Say/leetcode38-Count and Say.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode387-FirstUniqueCharacterinaString/leetcode387-FirstUniqueCharacterinaString.iml" filepath="$PROJECT_DIR$/leetcode387-FirstUniqueCharacterinaString/leetcode387-FirstUniqueCharacterinaString.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode39-CombinationSum/leetcode39-CombinationSum.iml" filepath="$PROJECT_DIR$/leetcode39-CombinationSum/leetcode39-CombinationSum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode412-FizzBuzz/leetcode412-FizzBuzz.iml" filepath="$PROJECT_DIR$/leetcode412-FizzBuzz/leetcode412-FizzBuzz.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode424LongestRepeatedLetters/leetcode424LongestRepeatedLetters.iml" filepath="$PROJECT_DIR$/leetcode424LongestRepeatedLetters/leetcode424LongestRepeatedLetters.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode46-Permutations/leetcode46-Permutations.iml" filepath="$PROJECT_DIR$/leetcode46-Permutations/leetcode46-Permutations.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode48-RotateImage/leetcode48-RotateImage.iml" filepath="$PROJECT_DIR$/leetcode48-RotateImage/leetcode48-RotateImage.iml" />

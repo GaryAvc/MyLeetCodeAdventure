@@ -27,7 +27,7 @@ public class Solution {
         return answer;
     }
 
-    public static void main(String[] args) {v
+    public static void main(String[] args) {
 
         int [] test = {3,7,2,9,10,5};
         int [] test1 = {8,5,2,7,9};
